@@ -174,7 +174,7 @@ body {
 .has-bg-image {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .h1,
@@ -504,10 +504,57 @@ body {
 
 .hero { padding-block-start: 0; }
 
+
+.scrollbar-item {
+  margin-top: 40px;
+}
+
+.scrollbar-item-three {
+  background-color: azure;
+}
+
+.scrollbar-item-three .hero-card {
+  background-color: azure;
+}
+
+
 .hero-card {
   background-color: var(--light-gray);
-  padding: 100px 15px;
-  background-position: 40%;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-content {
+  padding: 0;
+  width: 100%;
+}
+
+.card-content-new {
+  padding: 120px 0;
+}
+
+.right-hero {
+  padding: 0;
+  width: 100%;
+}
+
+#right-hero-three {
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#right-hero-three img{
+  width: 300px;
+  height: 400px;
+}
+
+.right-hero img {
+width:700px;
+height: 600px;
 }
 
 .hero-text {
@@ -1362,7 +1409,9 @@ body {
    * HERO
    */
 
-  .hero-card { padding: 120px 100px; }
+  .hero-card { padding: 0 100px; }
+
+
 
   .hero-text { max-width: 40ch; }
 
