@@ -606,7 +606,68 @@ height: 600px;
 
 
 
+/*-----------------------------------*\
+  #OFFER
+\*-----------------------------------*/
 
+.offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0 70px 0;
+
+}
+
+.offer-container {
+  width: 66.3%;
+  height: 100vh;
+  background-image: url(/assets/images2/img25.jpg);
+  background-position: center;
+  background-size: 1500px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.offer-p {
+  color: #000;
+}
+
+.offer-main {
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.offer-deal {
+  background-color: #fff;
+  width: 600px;
+  margin-right: 60px;
+  padding: 40px 20px;
+}
+
+.offer-deal h1 {
+  font-size: var(--fs-2);
+  font-family: sans-serif;
+  padding: 7px 0 10px;
+  color: #000;
+}
+
+.offer-btn {
+  padding: 10px 20px;
+  background-color: #000;
+  border: 1px solid #000;
+  margin-top: 15px;
+  font-size: var(--fs-6);
+  color: #fff;
+  transition: var(--transition-2);
+}
+
+.offer-btn:hover {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
 
 /*-----------------------------------*\
   #SHOP
