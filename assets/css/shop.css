@@ -135,10 +135,21 @@
   }
   ul.breadcrumb li a:hover {
     color: #01447e;
-    text-decoration: underline;
   }
 
   .breadcrumb-span {
     height: 30px;
     font-size: 30px;
   }
+
+.product-section {
+    background-color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 70%;
+    background-color: #0275d8;
+}
