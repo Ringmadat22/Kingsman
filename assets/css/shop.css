@@ -193,11 +193,13 @@
 }
 
 .shop-container .left-container {
-    width: 100%;
+    width: 900px;
     border: #0000002c solid 1px;
     padding: 40px 12px;
     margin-left: 18px;
-    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .shop-container .right-container {
@@ -207,15 +209,6 @@
 
 .shop-container img {
     width: 300px;
-}
-
-.shop-container .img-div {
-    border-radius: 7px;
-    width: 100%;
-}
-
-.right-container-content{
-    border: 1px solid red;
 }
 
 .right-container-content h1 {
@@ -228,7 +221,16 @@
     padding-bottom: 10px;
 }
 
-.right-container-content .quantity {
-    background: #01447e;
-    margin: 10px 0;
+.quantity label {
+    margin-bottom: 6px;
+    color: #000;
+}
+
+.quantity input[type="number"] {
+    width: 80px;
+    margin-top: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.333);
+    outline: none;
+    padding: 8px 15px;
+    font-size: 13px;
 }
