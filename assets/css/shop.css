@@ -1,25 +1,27 @@
 /*Acco*/
 .ac-container {
     max-width: 400px;
+    margin-top: 100px;
 }
 
 .ac-container label {
-    height: 30px !important;
+    height: 50px !important;
     line-height: 21px !important;
-    font-size: 12px !important;
+    font-size: 1.5rem !important;
     font-family: 'Open Sans','Arial Narrow',Arial,sans-serif !important;
-    padding: 5px 20px;
+    padding: 15px 20px;
     position: relative;
     z-index: 20;
+    text-transform: capitalize;
     display: block;
     height: 30px;
     cursor: pointer;
-    color: #777;
+    color: #000000;
     text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
     line-height: 33px;
     font-size: 19px;
     background: #fff;
-    background: -moz-linear-gradient(top,#fff 1%,#eaeaea 100%);
+
     background: -webkit-gradient(linear,left top,left bottom,color-stop(1%,#fff),color-stop(100%,#eaeaea));
     background: -webkit-linear-gradient(top,#fff 1%,#eaeaea 100%);
     background: -o-linear-gradient(top,#fff 1%,#eaeaea 100%);
@@ -59,11 +61,11 @@
     height: 24px;
     right: 13px;
     top: 7px;
-    background: transparent url(../images/arrow_down.png) no-repeat center center;
+    background: transparent url("/assets/images2/arrow_down.png") no-repeat center center;
 }
 
 .ac-container input:checked + label:hover:after {
-    background-image: url(../images/arrow_up.png);
+    background-image: url("/assets/images2/arrow_up.png");
 }
 
 .ac-container input {
@@ -198,7 +200,7 @@
 }
 
 .shop-container .left-container {
-    width: 900px;
+    width: 1300px;
     border: #0000002c solid 1px;
     padding: 40px 12px;
     margin-left: 18px;
@@ -218,22 +220,26 @@
 
 .right-container-content h1 {
     color: #000;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .right-container-content h3 {
     font-size: 1.3rem;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+.quantity {
+    margin-bottom: 40px;
 }
 
 .quantity label {
-    margin-bottom: 6px;
+    margin-bottom: 15px;
     color: #000;
 }
 
 .quantity input[type="number"] {
     width: 80px;
-    margin-top: 15px;
+    margin-top: 20px;
     border: 1px solid rgba(128, 128, 128, 0.333);
     outline: none;
     padding: 8px 15px;
@@ -241,7 +247,6 @@
 }
 
 .add-to-cart-div {
-    background-color: antiquewhite;
     display: flex;
     margin-top: 15px;
 }
@@ -249,5 +254,52 @@
 .add-to-cart-div .add-to-cart-btn {
     background-color: #fff;
     border: 1px solid #000;
-    width: 220px;
+    width: 320px;
+    transition: all ease 0.3s;
+    margin-right: 10px;
+    border-radius: 3px;
+    padding: 6px 0;
+}
+
+.add-to-cart-div .add-to-cart-btn:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+.add-to-wishlist-btn {
+    background-color: #000;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.3s;
+    border: 1px solid #000;
+    border-radius: 3px;
+
+}
+
+.add-to-wishlist-btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.right-container-content .buy-now-btn {
+    margin-top: 7px;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    padding: 6px 0;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    transition: all ease 0.3s;
+}
+
+.right-container-content .buy-now-btn:hover{
+    background-color: #fff;
+    color: #000;
 }
