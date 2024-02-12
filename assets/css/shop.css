@@ -166,9 +166,9 @@
 
 .button-group button {
     background-color: none;
-    padding: 2px 12px;
+    padding: 0 12px;
     font-size: 15px;
-    height: 28px;
+    height: 20px;
     color: black;
     transition: all ease 0.3s;
 }
@@ -216,4 +216,19 @@
 
 .right-container-content{
     border: 1px solid red;
+}
+
+.right-container-content h1 {
+    color: #000;
+    padding-bottom: 10px;
+}
+
+.right-container-content h3 {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+
+.right-container-content .quantity {
+    background: #01447e;
+    margin: 10px 0;
 }
