@@ -159,6 +159,8 @@
     padding: 20px 70px;
 }
 
+
+
 .button-group{
     display: flex;
     justify-content: space-between;
@@ -183,13 +185,16 @@
 
 .main-container-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .shop-container {
     display: flex;
     justify-content: space-evenly;
     padding: 20px 70px;
+    width: 100%;
 }
 
 .shop-container .left-container {
@@ -233,4 +238,16 @@
     outline: none;
     padding: 8px 15px;
     font-size: 13px;
+}
+
+.add-to-cart-div {
+    background-color: antiquewhite;
+    display: flex;
+    margin-top: 15px;
+}
+
+.add-to-cart-div .add-to-cart-btn {
+    background-color: #fff;
+    border: 1px solid #000;
+    width: 220px;
 }
