@@ -2,10 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KINGSMAN CLASSIC BOUTIQUE</title>
+    <meta charset="utf-8">
+    <title>KINGSMAN CLASSIC BOUTIQUE</title>
 
   <!-- 
     - favicon
@@ -15,7 +13,7 @@
   <!-- 
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css3/style.css">
 
   <!-- 
     - google font link
@@ -32,465 +30,291 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
   <link rel="preload" as="image" href="./assets/images2/banner-4.jpg">
 
-   <!-- Favicon -->
-   <link href="img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-   <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
-   <!-- CSS Libraries -->
-   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-   <link href="lib/slick/slick.css" rel="stylesheet">
-   <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-   <!-- Template Stylesheet -->
-   <link href="assets/css/cart.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/header.css">
 </head>
 
-<body id="top">
+<body>
+    <header class="header">
 
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header">
-
-    <div class="alert">
-      <div class="container">
-        <p class="alert-text">Free Shipping On All Orders $250+</p>
-      </div>
-    </div>
-
-    <div class="header-top" data-header>
-      <div class="container">
-
-        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-          <span class="line line-3"></span>
-        </button>
-
-        <div class="input-wrapper">
-          <input type="search" name="search" placeholder="Search product" class="search-field">
-
-          <button class="search-submit" aria-label="search">
-            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-          </button>
+        <div class="alert">
+          <div class="container">
+            <p class="alert-text">Free Shipping On All Orders $250+</p>
+          </div>
         </div>
-
-       <h1>KINGSMAN CLASSIC</h1>
-
-        <div class="header-actions">
-
-          <button class="header-action-btn" aria-label="user">
-            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-          </button>
-
-          <button class="header-action-btn" aria-label="favourite item">
-            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
-          </button>
-
-          <button class="header-action-btn" aria-label="cart item">
-            <data class="btn-text" value="0">$0.00</data>
-
-            <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
-          </button>
-
+    
+        <div class="header-top" data-header>
+          <div class="container">
+    
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </button>
+    
+            <div class="input-wrapper">
+              <input type="search" name="search" placeholder="Search product" class="search-field">
+    
+              <button class="search-submit" aria-label="search">
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+              </button>
+            </div>
+    
+           <h1>KINGSMAN CLASSIC</h1>
+    
+            <div class="header-actions">
+    
+              <button class="header-action-btn" aria-label="user">
+                <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+              </button>
+    
+              <button class="header-action-btn" aria-label="favourite item">
+                <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+    
+                <span class="btn-badge">0</span>
+              </button>
+    
+              <button class="header-action-btn" aria-label="cart item">
+                <data class="btn-text" value="0">$0.00</data>
+    
+                <ion-icon name="bag-handle-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+    
+                <span class="btn-badge">0</span>
+              </button>
+    
+            </div>
+    
+            <nav class="navbar">
+              <ul class="navbar-list">
+    
+                <li>
+                  <a href="#home" class="navbar-link has-after">HOME</a>
+                </li>
+    
+                <li>
+                  <a href="#collection" class="navbar-link has-after">COLLECTION</a>
+                </li>
+    
+                <li>
+                  <a href="#shop" class="navbar-link has-after">SHOP</a>
+                </li>
+    
+                <li>
+                  <a href="#offer" class="navbar-link has-after">OFFER</a>
+                </li>
+    
+                <li>
+                  <a href="#blog" class="navbar-link has-after">BLOG</a>
+                </li>
+    
+              </ul>
+            </nav>
+    
+          </div>
         </div>
-
-        <nav class="navbar">
-          <ul class="navbar-list">
-
-            <li>
-              <a href="#home" class="navbar-link has-after">HOME</a>
-            </li>
-
-            <li>
-              <a href="#collection" class="navbar-link has-after">COLLECTION</a>
-            </li>
-
-            <li>
-              <a href="#shop" class="navbar-link has-after">SHOP</a>
-            </li>
-
-            <li>
-              <a href="#offer" class="navbar-link has-after">OFFER</a>
-            </li>
-
-            <li>
-              <a href="#blog" class="navbar-link has-after">BLOG</a>
-            </li>
-
-          </ul>
-        </nav>
-
-      </div>
-    </div>
-
-  </header>
+    
+    </header>
 
 
-
-
-
-
-
-  <!-- 
-    - #MOBILE NAVBAR
-  -->
-
-  <div class="sidebar">
-    <div class="mobile-navbar" data-navbar>
-
-      <div class="wrapper">
-        <h1>KINGSMAN</h1>
-
-        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-        </button>
-      </div>
-
-      <ul class="navbar-list">
-
-        <li>
-          <a href="#home" class="navbar-link" data-nav-link>HOME</a>
-        </li>
-
-        <li>
-          <a href="#collection" class="navbar-link" data-nav-link>COLLECTION</a>
-        </li>
-
-        <li>
-          <a href="#shop" class="navbar-link" data-nav-link>SHOP</a>
-        </li>
-
-        <li>
-          <a href="#offer" class="navbar-link" data-nav-link>OFFER</a>
-        </li>
-
-        <li>
-          <a href="#blog" class="navbar-link" data-nav-link>BLOG</a>
-        </li>
-
-      </ul>
-
-    </div>
-
-    <div class="overlay" data-nav-toggler data-overlay></div>
-  </div>
-
-  <main>
-     <!-- Breadcrumb Start -->
-        <div class="breadcrumb-wrap">
-            <div class="container-fluid">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Products</a></li>
-                    <li class="breadcrumb-item active">Cart</li>
-                </ul>
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h1 class="font-weight-semi-bold text-uppercase mb-3">Shopping Cart</h1>
+            <div class="d-inline-flex">
+                <p class="m-0"><a href="">Home</a></p>
+                <p class="m-0 px-2">-</p>
+                <p class="m-0">Shopping Cart</p>
             </div>
         </div>
-        <!-- Breadcrumb End -->
-
-
-        <div class="cart-page">
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-lg-8">
-                      <div class="cart-page-inner">
-                          <div class="table-responsive">
-                              <table class="table table-bordered">
-                                  <thead class="thead-dark">
-                                      <tr>
-                                          <th>Product</th>
-                                          <th>Price</th>
-                                          <th>Quantity</th>
-                                          <th>Total</th>
-                                          <th>Remove</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody class="align-middle">
-                                      <tr>
-                                          <td>
-                                              <div class="img">
-                                                  <a href="#"><img src="img/product-1.jpg" alt="Image"></a>
-                                                  <p>Product Name</p>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td>
-                                              <div class="qty">
-                                                  <button class="btn-minus"><i class="fa fa-minus"></i></button>
-                                                  <input type="text" value="1">
-                                                  <button class="btn-plus"><i class="fa fa-plus"></i></button>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td><button><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="img">
-                                                  <a href="#"><img src="img/product-2.jpg" alt="Image"></a>
-                                                  <p>Product Name</p>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td>
-                                              <div class="qty">
-                                                  <button class="btn-minus"><i class="fa fa-minus"></i></button>
-                                                  <input type="text" value="1">
-                                                  <button class="btn-plus"><i class="fa fa-plus"></i></button>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td><button><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="img">
-                                                  <a href="#"><img src="img/product-3.jpg" alt="Image"></a>
-                                                  <p>Product Name</p>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td>
-                                              <div class="qty">
-                                                  <button class="btn-minus"><i class="fa fa-minus"></i></button>
-                                                  <input type="text" value="1">
-                                                  <button class="btn-plus"><i class="fa fa-plus"></i></button>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td><button><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="img">
-                                                  <a href="#"><img src="img/product-4.jpg" alt="Image"></a>
-                                                  <p>Product Name</p>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td>
-                                              <div class="qty">
-                                                  <button class="btn-minus"><i class="fa fa-minus"></i></button>
-                                                  <input type="text" value="1">
-                                                  <button class="btn-plus"><i class="fa fa-plus"></i></button>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td><button><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              <div class="img">
-                                                  <a href="#"><img src="img/product-5.jpg" alt="Image"></a>
-                                                  <p>Product Name</p>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td>
-                                              <div class="qty">
-                                                  <button class="btn-minus"><i class="fa fa-minus"></i></button>
-                                                  <input type="text" value="1">
-                                                  <button class="btn-plus"><i class="fa fa-plus"></i></button>
-                                              </div>
-                                          </td>
-                                          <td>$99</td>
-                                          <td><button><i class="fa fa-trash"></i></button></td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-lg-4">
-                      <div class="cart-page-inner">
-                          <div class="row">
-                              <div class="col-md-12">
-                                  <div class="coupon">
-                                      <input type="text" placeholder="Coupon Code">
-                                      <button>Apply Code</button>
-                                  </div>
-                              </div>
-                              <div class="col-md-12">
-                                  <div class="cart-summary">
-                                      <div class="cart-content">
-                                          <h1>Cart Summary</h1>
-                                          <p>Sub Total<span>$99</span></p>
-                                          <p>Shipping Cost<span>$1</span></p>
-                                          <h2>Grand Total<span>$100</span></h2>
-                                      </div>
-                                      <div class="cart-btn">
-                                          <button>Update Cart</button>
-                                          <button>Checkout</button>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </main>
-
-
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
-  <footer class="footer" data-section>
-    <div class="container">
-
-      <div class="footer-top">
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Company</p>
-          </li>
-
-          <li>
-            <p class="footer-list-text">
-              Find a location nearest you. See <a href="#" class="link">Our Stores</a>
-            </p>
-          </li>
-
-          <li>
-            <p class="footer-list-text bold">+251-989-173-583</p>
-          </li>
-
-          <li>
-            <p class="footer-list-text">hello@domain.com</p>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Useful links</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">New Products</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Best Sellers</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Bundle & Save</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Online Gift Card</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Infomation</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Start a Return</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Contact Us</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Shipping FAQ</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Terms & Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Privacy Policy</a>
-          </li>
-
-        </ul>
-
-        <div class="footer-list">
-
-          <p class="newsletter-title">Good emails.</p>
-
-          <p class="newsletter-text">
-            Enter your email below to be the first to know about new collections and product launches.
-          </p>
-
-          <form action="" class="newsletter-form">
-            <input type="email" name="email_address" placeholder="Enter your email address" required
-              class="email-field">
-
-            <button type="submit" class="btn btn-primary">Subscribe</button>
-          </form>
-
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-
-        <div class="wrapper">
-          <p class="copyright">
-            &copy; 2024 KINGSMAN CLASSIC
-          </p>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-        </div>
-
-
-        <img src="./assets/images2/pay.png" width="313" height="28" alt="available all payment method" class="w-100">
-
-      </div>
-
     </div>
-  </footer>
+    <!-- Page Header End -->
+
+
+    <!-- Cart Start -->
+    <div class="container-fluid pt-5" id="cart">
+        <div class="row px-xl-5">
+            <div class="col-lg-8 table-responsive mb-5">
+                <table class="table table-bordered text-center mb-0">
+                    <thead class="bg-secondary text-dark">
+                        <tr>
+                            <th>Products</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                        <tr>
+                            <td class="align-middle"><img src="img/product-1.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle">
+                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-plus">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><button class="btn btn-sm btn-secondary"><i class="fa fa-times"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle"><img src="img/product-2.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle">
+                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-plus">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><button class="btn btn-sm btn-secondary"><i class="fa fa-times"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle"><img src="img/product-3.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle">
+                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-plus">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><button class="btn btn-sm btn-secondary"><i class="fa fa-times"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle"><img src="img/product-4.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle">
+                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-plus">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><button class="btn btn-sm btn-secondary"><i class="fa fa-times"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle"><img src="img/product-5.jpg" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle">
+                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-minus" >
+                                        <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center" value="1">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-secondary btn-plus">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">$150</td>
+                            <td class="align-middle"><button class="btn btn-sm btn-secondary"><i class="fa fa-times"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <form class="mb-5" action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-4" placeholder="Coupon Code">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary">Apply Coupon</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="card border-secondary mb-5">
+                    <div class="card-header bg-secondary border-0">
+                        <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-3 pt-1">
+                            <h6 class="font-weight-medium">Subtotal</h6>
+                            <h6 class="font-weight-medium">$150</h6>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-medium">Shipping</h6>
+                            <h6 class="font-weight-medium">$10</h6>
+                        </div>
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="font-weight-bold">Total</h5>
+                            <h5 class="font-weight-bold">$160</h5>
+                        </div>
+                        <button class="btn btn-block btn-secondary my-3 py-3">
+                            <a href="checkout.html" id="checkout-a">Proceed To Checkout</a>
+                        </button>
+
+                        <style>
+                            #checkout-a {
+                                color: black;
+                            }
+
+                            #checkout-a:hover {
+                                text-decoration: none;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cart End -->
+
 
 
 
@@ -519,6 +343,24 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
