@@ -114,6 +114,10 @@ a {
   color: inherit;
 }
 
+
+a:hover {
+  color: var(--hoockers-green);
+}
 img { height: auto; }
 
 input,
@@ -355,6 +359,10 @@ body {
   padding-block-end: 80px;
 }
 
+header a:hover {
+  color: var(--hoockers-green);
+}
+
 .alert {
   background-color: var(--pale-spring-bud);
   color: var(--black);
@@ -420,8 +428,41 @@ body {
 
 .header-action-btn:is(:hover, :focus) { color: var(--black_70); }
 
+#navbar-top {
+  margin-bottom: 0px;
+  padding-bottom: 15px;
+
+}
+
+.dropbtn {
+
+  color: var(--black);
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
 
+.dropdown:hover .dropdown-content {display: block;}
 
 
 /*-----------------------------------*\
