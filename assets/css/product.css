@@ -317,7 +317,6 @@ main {
 @media (max-width: 885px) {
     .main-container {
         width: 90%;
-        background-color: #01447e;
         display: flex;
         flex-direction: column;
     }
@@ -336,14 +335,12 @@ main {
     .shop-container .right-container {
         margin-left:20px ;
         width: 400px;
-        background-color: red;
     }
 }
 
 @media (max-width: 885px) {
     .main-container {
         width: 90%;
-        background-color: #01447e;
         display: flex;
         flex-direction: column;
     }
@@ -362,14 +359,12 @@ main {
     .shop-container .right-container {
         margin-left:20px ;
         width: 300px;
-        background-color: red;
     }
 }
 
 @media (max-width: 885px) {
     .main-container {
         width: 95%;
-        background-color: #01447e;
         display: flex;
         flex-direction: column;
     }
@@ -397,7 +392,6 @@ main {
     .shop-container .right-container {
         margin-left:20px ;
         width: 300px;
-        background-color: red;
     }
 }
 
@@ -443,7 +437,6 @@ main {
     }
     .main-container {
         width: 95%;
-        background-color: #01447e;
         display: flex;
 
     }
@@ -451,7 +444,7 @@ main {
     .shop-container .left-container {
         width: 430px;
         height: 400px;
-        border: #0000002c solid 1px;
+        border: 1px solid gray;
         padding: 40px 12px;
         margin-left: 18px;
         display: flex;
@@ -462,11 +455,9 @@ main {
     .shop-container .right-container {
         margin-left:20px ;
         width: 368px;
-        background-color: red;
     }
 
     .main-container-bottom {
-        background-color: blue;
         padding: 120px 0;
         margin: 0;
     }
@@ -479,7 +470,6 @@ main {
     .shop-container .left-container  {
         width: 370px;
         border: 1px solid #fff;
-        background-color: aqua;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -501,7 +491,6 @@ main {
 
     .right-container {
         width: 500px;
-        background-color: green;
     }
 }
 
@@ -509,7 +498,6 @@ main {
     .shop-container .left-container  {
         width: 340px;
         border: 1px solid #fff;
-        background-color: aqua;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -532,7 +520,6 @@ main {
     .shop-container .right-container {
         margin-left:19px ;
         width: 340px;
-        background-color: red;
     }
 
 }
@@ -541,7 +528,6 @@ main {
     .shop-container .left-container  {
         width: 320px;
         border: 1px solid #fff;
-        background-color: aqua;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -553,7 +539,7 @@ main {
         height: 320px;
         display: flex;
         justify-content: center;
-        align-items: centerr;
+        align-items: center;
     }
 
     .left-container .img-div img {
@@ -564,7 +550,6 @@ main {
     .shop-container .right-container {
         margin-left:19px ;
         width: 320px;
-        background-color: red;
     }
 
 }
