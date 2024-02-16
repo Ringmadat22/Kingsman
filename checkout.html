@@ -46,10 +46,10 @@
 
 <body>
     
-    <!-- Navbar End -->
-   <!-- 
+<!-- 
     - #HEADER
   -->
+
   <header class="header">
 
     <div class="alert">
@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <div class="header-top" data-header>
+    <div class="header-top" id="navbar-top" data-header>
       <div class="container">
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
@@ -102,7 +102,7 @@
 
         </div>
 
-        <nav class="navbar">
+        <nav class="navbar" id="navbar-bottom" >
           <ul class="navbar-list">
 
             <li>
@@ -115,17 +115,17 @@
     
             <li>
               <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
+                <button class="dropbtn">COLLECTION</button>
                 <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
+                  <a href="#">Link 1(shoes)</a>
+                  <a href="#">Link 2(ACCESSORIES)</a>
                   <a href="#">Link 3</a>
                 </div>
               </div>
               </li>
     
             <li>
-              <a href="#blog" class="navbar-link" data-nav-link>BLOG</a>
+              <a href="laundry.html" class="navbar-link" data-nav-link>OUR LAUNDRY</a>
             </li>
     
           </ul>
@@ -166,7 +166,14 @@
         </li>
 
         <li>
-            <a href="laundry.html" class="navbar-link" data-nav-link>LAUNDRY</a>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
           </li>
 
         <li>
@@ -179,6 +186,9 @@
 
     <div class="overlay" data-nav-toggler data-overlay></div>
   </div>
+
+
+
 
 
 
