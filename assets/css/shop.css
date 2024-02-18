@@ -94,6 +94,7 @@ PRICE BUTTON RANGE
 header h2{
   font-size: 1.8vmin;
   font-weight: 500;
+  color: #000;
 }
 header p{
   margin-top: 5px;
@@ -200,7 +201,7 @@ TYPE FILTER
 .type-content {
   width: 300px;
   border: none;
-  margin: 20px 0 10px 0;
+  margin: 5px 0 10px 0;
   border-radius:4px;
   background-color: inherit;
   padding: 10px 25px 40px 0;
@@ -217,7 +218,7 @@ TYPE FILTER
   color: #000000;
   font-size: 1.6vmin;
   font-weight: 300;
-  padding: 8px 20px 8px 15px;
+  padding: 0 20px 8px 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 8px;
@@ -269,7 +270,14 @@ TYPE FILTER
   color: #007BFF;
 }
 
-
+.type-h1 {
+  font-size: 1.8vmin;
+  font-weight: 500;
+  color: #000;
+  padding: 20px 0 7px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.515);
+  margin: 20px;
+}
 /* 
 
 MODAL FILTER
