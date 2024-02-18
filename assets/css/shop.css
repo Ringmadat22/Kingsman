@@ -85,6 +85,7 @@ PRICE BUTTON RANGE
   padding: 20px 25px 40px 20px;
   box-shadow:none;
   margin: 20px 0px 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.167);
 }
 
 .field span {
@@ -243,11 +244,11 @@ LOCATION FILTER
 
 #item-list {
   list-style-type: none;
-  padding: 0;
+  padding: 0 15px;
   margin: 0;
   height: 20vh;
   overflow-y: scroll;
-  width: 320px;
+  width: 290px;
   margin-left: 6px;
 }
 
