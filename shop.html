@@ -248,41 +248,79 @@
             <option value="2">Highest Prices</option>
             <option value="3">Lowest Prices</option>
           </select>
-          
+
         </section>
 
         <div class="bottom-shop-section">
+
           <div class="bottom-shop-section-container">
-            <section class="categories">
-              <div class="categories-container">
-                <h1>Categories</h1>
+
+            <section class="filter-section">
+              <div class="filter-section-container">
+                <div class="categories-container">
+                  <h1 class="filter-h1">Categories</h1>
+                </div>
+  
+                <div class="wrapper price">
+                  <header>
+                  <h2>Price</h2>
+  
+                  <div class="divider"></div>
+                  </header>
+                  <div class="price-input">
+                    <div class="field">
+                      <span>Min</span>
+                      <input type="number" class="input-min" value="5000">
+                    </div>
+                    <div class="separator">-</div>
+                    <div class="field">
+                      <span>Max</span>
+                      <input type="number" class="input-max" value="75000">
+                    </div>
+                  </div>
+                  <div class="slider">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="100000" value="2500" step="100">
+                    <input type="range" class="range-max" min="0" max="100000" value="7500" step="100">
+                  </div>
+                </div>
+
+                <div class="type">
+    
+                  <div class="type-content">
+
+                      <input type="text" id="search" placeholder="Search for location">
+
+                      <ul id="item-list">
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">wau</a></li>
+                          <li><a href="#">yei</a></li>
+                          <li><a href="#">abyei</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+                          <li><a href="#">Juba</a></li>
+
+                      </ul>
+
+                  </div>
+
+                </div>
+
               </div>
+              
+            </section>
 
-              <div class="wrapper price">
-                <header>
-                <h2>Price, USD</h2>
+            <section class="shop-content">
 
-                <div class="divider"></div>
-                </header>
-                <div class="price-input">
-                <div class="field">
-                    <span>Min</span>
-                    <input type="number" class="input-min" value="5000">
-                </div>
-                <div class="separator">-</div>
-                <div class="field">
-                    <span>Max</span>
-                    <input type="number" class="input-max" value="75000">
-                </div>
-                </div>
-                <div class="slider">
-                <div class="progress"></div>
-                </div>
-                <div class="range-input">
-                <input type="range" class="range-min" min="0" max="100000" value="2500" step="100">
-                <input type="range" class="range-max" min="0" max="100000" value="7500" step="100">
-                </div>
-            </div>
             </section>
           </div>
         </div>
