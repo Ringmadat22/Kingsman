@@ -15,6 +15,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/shop.css">
 
   <!-- 
     - google font link
@@ -232,7 +233,65 @@
 
   <main>
 
+    <section class="shop-main-section">
+      <div class="shop-container">
+        <section class="top-shop-section">
+          <ul class="breadcrumb">
+            <li><a href="#">HOME&nbsp; &#8260; &nbsp;</a></li>
+            <li><a href="#"> SHOP &#8260; &nbsp;</a></li>
+            <li> PRODUCT</li>
+          </ul>
+
+          <select class="new-sort">
+            <option value="0" type="text"> SORT BY</option>
+            <option value="1">RECOMMENDED</option>
+            <option value="2">Highest Prices</option>
+            <option value="3">Lowest Prices</option>
+          </select>
+          
+        </section>
+
+        <div class="bottom-shop-section">
+          <div class="bottom-shop-section-container">
+            <section class="categories">
+              <div class="categories-container">
+                <h1>Categories</h1>
+              </div>
+
+              <div class="wrapper price">
+                <header>
+                <h2>Price, USD</h2>
+
+                <div class="divider"></div>
+                </header>
+                <div class="price-input">
+                <div class="field">
+                    <span>Min</span>
+                    <input type="number" class="input-min" value="5000">
+                </div>
+                <div class="separator">-</div>
+                <div class="field">
+                    <span>Max</span>
+                    <input type="number" class="input-max" value="75000">
+                </div>
+                </div>
+                <div class="slider">
+                <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                <input type="range" class="range-min" min="0" max="100000" value="2500" step="100">
+                <input type="range" class="range-max" min="0" max="100000" value="7500" step="100">
+                </div>
+            </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
       
+
+
   </main>
 
 
