@@ -184,7 +184,7 @@ input[type="range"]::-moz-range-thumb{
 
 /* 
 
-LOCATION FILTER
+TYPE FILTER
 
 */
 
@@ -245,16 +245,16 @@ LOCATION FILTER
 #item-list {
   list-style-type: none;
   padding: 0 15px;
-  margin: 0;
+  margin: 10px 0;
   height: 20vh;
   overflow-y: scroll;
-  width: 290px;
+  width: 287px;
   margin-left: 6px;
 }
 
 #item-list li a {
   border: none;
-  margin-top: -1px ;
+  margin-top: 10px ;
   background-color: inherit;
   padding: 5px 0 5px 5px;
   text-decoration: none;
