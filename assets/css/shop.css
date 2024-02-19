@@ -80,7 +80,7 @@ PRICE BUTTON RANGE
   border-radius: 5px;
   padding: 20px 25px 40px 20px;
   box-shadow:none;
-  margin: 20px 0px 0 0;
+  margin: 60px 0px 0 0;
   border: 1px solid rgba(0, 0, 0, 0.167);
 }
 
@@ -635,17 +635,18 @@ other FILTER
 .shop-content {
   margin-left: 20px;
   padding-top: 0;
-  border: 1px solid rgba(0, 0, 0, 0.167);
 }
 
 .first-ul {
   padding-top: 0;
-  margin: 0 0 20px 0;
+  margin: 28px 0 20px 0;
 }
 
-.has-scrollbar-li {
-  background-color: aliceblue;
-  margin-top: 34px;
+.has-scrollbar li {
+  margin-top: 38px;
+  border: rgba(128, 128, 128, 0.388) 1px solid;
+  border-radius: 7px;
+  overflow: hidden;
 }
 
 .new-sort-main{
@@ -667,12 +668,14 @@ select {
   -webkit-appearance: none;
   /*  other styles for aesthetics */
   width: 220px;
-  font-size: 1.15rem;
-  padding: 18px ;
+  font-size: 1.8rem;
+  padding: 12px ;
   background-color: hsl(148, 20%, 38%);
   border-radius: 0.25rem;
   color: #ffffff;
+  font-weight: 800;
   cursor: pointer;
+  text-transform: uppercase;
   border: none;
   outline: none;
 }
