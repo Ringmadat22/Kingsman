@@ -636,3 +636,13 @@ other FILTER
   border-color: #4d4d4d;
 }
 
+.shop-content {
+  background-color: #007BFF;
+  margin-left: 20px;
+  padding-top: 0;
+}
+
+.first-ul {
+  padding-top: 0;
+  margin: 0 0 20px 0;
+}
