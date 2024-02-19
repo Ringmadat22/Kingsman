@@ -10,7 +10,7 @@ ul.breadcrumb li {
 }
 
 ul.breadcrumb li a {
-  color: #0275d8;
+  color: hsl(148, 20%, 38%);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ ul.breadcrumb li a {
   font-size: 15px;
 }
 ul.breadcrumb li a:hover {
-  color: #01447e;
+  color: hsl(148, 21%, 24%);
 }
 
 .breadcrumb-span {
@@ -27,12 +27,10 @@ ul.breadcrumb li a:hover {
 }
 
 main {
-  background-color: aquamarine;
   padding: 20px 0;
 }
 
 .shop-main-section {
-  background-color: red;
   padding: 20px 0;
   display: flex;
   justify-content: center;
@@ -40,7 +38,6 @@ main {
 }
 
 .shop-container {
-  background-color: aliceblue;
   width: 85%;
   padding: 20px 0;
 }
@@ -51,21 +48,20 @@ main {
 }
 
 .top-shop-section {
-  background: #01447e;
+  border: 1px solid rgba(0, 0, 0, 0.167);
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
 }
 
 .filter-section {
-  background-color: aqua;
   width: 320px;
 }
 
 .filter-h1 {
   padding: 10px 20px;
-  background-color: #0275d8;
-  color: #000;
+  background-color: hsl(148, 20%, 38%);
+  color: #ffffff;
   text-transform: uppercase;
 }
 /* 
@@ -146,7 +142,7 @@ input[type="number"]::-webkit-inner-spin-button {
   right: 25%;
   position: absolute;
   border-radius: 5px;
-  background: #1095ed;
+  background: hsl(148, 20%, 38%);
 }
 .range-input{
   position: relative;
@@ -166,7 +162,7 @@ input[type="range"]::-webkit-slider-thumb{
   height: 17px;
   width: 17px;
   border-radius: 50%;
-  background: #1095ed;
+  background: hsl(148, 20%, 38%);
   pointer-events: auto;
   -webkit-appearance: none;
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
@@ -176,7 +172,7 @@ input[type="range"]::-moz-range-thumb{
   width: 17px;
   border: none;
   border-radius: 50%;
-  background: #1095ed;
+  background: hsla(148, 20%, 38%, 0.814);
   pointer-events: auto;
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0,0,0,0.05);
@@ -239,7 +235,7 @@ TYPE FILTER
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1095ed; 
+  background: hsl(148, 20%, 38%); 
   border-radius: 10px;
 }
 
@@ -267,7 +263,7 @@ TYPE FILTER
 }
 
 #item-list li a:hover:not(.header) {
-  color: #007BFF;
+  color: hsl(148, 20%, 38%);
 }
 
 .type-h1 {
@@ -359,14 +355,14 @@ COLOR FILTER
   width: 15px;
   height: 15px;
   margin-right: 12px;
-  border: 2px solid #007BFF;
+  border: 2px solid hsl(148, 20%, 38%);
   border-radius: 4px;
   transition: all 0.3s;
 }
 
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
-  background-color: #1095ed;
-  border-color: #007BFF;
+  background-color: hsl(148, 20%, 38%);
+  border-color: hsl(149, 21%, 25%);
 }
 
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
@@ -386,7 +382,7 @@ COLOR FILTER
 }
 
 .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
-  border-color: #4267B2;
+  border-color: hsl(148, 20%, 38%);
 }
 
 .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
@@ -479,14 +475,14 @@ SIZE FILTER
   width: 15px;
   height: 15px;
   margin-right: 12px;
-  border: 2px solid #007BFF;
+  border: 2px solid hsl(148, 20%, 38%);
   border-radius: 4px;
   transition: all 0.3s;
 }
 
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
-  background-color: #1095ed;
-  border-color: #007BFF;
+  background-color: hsl(148, 20%, 38%);
+  border-color: hsl(149, 20%, 26%);
 }
 
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
@@ -506,7 +502,7 @@ SIZE FILTER
 }
 
 .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
-  border-color: #4267B2;
+  border-color: hsl(148, 20%, 38%);
 }
 
 .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
@@ -597,14 +593,14 @@ other FILTER
   width: 15px;
   height: 15px;
   margin-right: 12px;
-  border: 2px solid #007BFF;
+  border: 2px solid hsl(148, 20%, 38%);
   border-radius: 4px;
   transition: all 0.3s;
 }
 
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
-  background-color: #1095ed;
-  border-color: #007BFF;
+  background-color: hsl(148, 20%, 38%);
+  border-color: hsl(148, 21%, 31%);
 }
 
 .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
@@ -624,7 +620,7 @@ other FILTER
 }
 
 .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
-  border-color: #4267B2;
+  border-color: hsl(148, 20%, 38%);
 }
 
 .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
@@ -637,12 +633,16 @@ other FILTER
 }
 
 .shop-content {
-  background-color: #007BFF;
   margin-left: 20px;
   padding-top: 0;
+  border: 1px solid rgba(0, 0, 0, 0.167);
 }
 
 .first-ul {
   padding-top: 0;
   margin: 0 0 20px 0;
+}
+
+.new-sort-main{
+
 }
