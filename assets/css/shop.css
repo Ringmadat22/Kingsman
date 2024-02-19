@@ -643,6 +643,59 @@ other FILTER
   margin: 0 0 20px 0;
 }
 
-.new-sort-main{
+.has-scrollbar-li {
+  background-color: aliceblue;
+  margin-top: 34px;
+}
 
+.new-sort-main{
+  display: flex;
+  justify-content: right;
+}
+
+.custom-select {
+  width: 240px;
+  position: relative;
+  background-color: hsl(148, 20%, 38%);
+  border: none;
+  outline: none;
+}
+
+select {
+  appearance: none;
+  /*  safari  */
+  -webkit-appearance: none;
+  /*  other styles for aesthetics */
+  width: 220px;
+  font-size: 1.15rem;
+  padding: 18px ;
+  background-color: hsl(148, 20%, 38%);
+  border-radius: 0.25rem;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 0.3rem;
+  content: "";
+  position: absolute;
+  right: 3rem;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid rgb(255, 255, 255);
+  top: 40%;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid rgb(255, 255, 255);
+  top: 55%;
 }
