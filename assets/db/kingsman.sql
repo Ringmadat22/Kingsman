@@ -1,17 +1,29 @@
+--CREATE DATABASE
+-- ####################################################################
+-- # Basic CREATE DATABASE statement
+-- # See https://www.ibm.com/docs/en/db2-for-zos/13?topic=statements-create-database for complete syntax.
+-- ####################################################################
+CREATE DATABASE kingsman,
+
 -- Create table for categories
 CREATE TABLE categories (
     category_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(80) NOT NULL
 );
 
+CREATE TABLE users (
+    
+)
+
 -- Create table for products
 CREATE TABLE products (
     product_id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
-    product_description VARCHAR(100),
-    category_id INT,
+    product_description VARCHAR(100) NOT NULL,
+    category_id INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
     color VARCHAR(50),
+    size VARCHAR(50) NOT NULL,
     FOREIGN KEY (category_id) REFERENCES categories(category_id)
 );
 
