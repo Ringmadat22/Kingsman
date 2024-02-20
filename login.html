@@ -8,7 +8,98 @@
 </head>
 <body>
     <main>
-        
+        <div class="main-container">
+
+            <input type="checkbox" id="check">
+
+            <div class="login form">
+
+              <header>Login</header>
+
+              <form id="myForm" action="login.php" method="post">
+
+                <input type="text" id="email-2" name="email" placeholder="Enter your email" required style="border: 1px solid rgb(192, 192, 192);">
+                
+                <input type="password" id="password" name="password" placeholder="Enter your password" required style="border: 1px solid rgb(192, 192, 192);">
+                
+                <span class="remember">
+
+                  <label class="checkbox-container">Remember me
+
+                    <input type="checkbox">
+
+                    <span class="checkmark"></span>
+
+                  </label>
+
+                  <a href="#">Forgot password?</a>
+
+                </span>
+                
+                <input type="submit" id="button" value="Login">
+
+                <p class="or">- Or -</p>
+    
+                <button id="facebook-btn" class="button-2"><i class="fa fa-facebook-f"></i>Login With Facebook</button>
+    
+                <button id="google-btn" class="button-2"><i class="fa fa-google"></i>Login With Google</button>
+    
+                <button id="twitter-btn" class="button-2"><i class="fa fa-twitter"></i>Login With Twitter</button>
+    
+              </form>
+
+
+              <div class="signup" >
+
+                <span class="signup">Don't have an account?
+
+                 <label for="check">Signup</label>
+
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="registration form" id="registeration-form">
+
+              <header>Signup</header>
+
+              <form id="myForm" action="phpfiles/register.php">
+
+                <input type="text" name="firstname" id="f-name firstname" placeholder="First Name" required>
+
+                <input type="text" name="lastname" id="l-name lastname" placeholder="Last Name" required>
+
+                <input type="text" name="email" id="email-2 email" placeholder="Enter your email" required style="border: 1px solid rgb(192, 192, 192);">
+
+                <input type="password" name="password" id="password-2 password" placeholder="Create a password">
+
+                <input type="submit" id="button" value="Signup">
+                
+                <p class="or">- Or -</p>
+    
+                <button id="facebook-btn" class="button-2"><i class="fa fa-facebook-f"></i>Login With Facebook</button>
+    
+                <button id="google-btn" class="button-2"><i class="fa fa-google"></i>Login With Google</button>
+    
+                <button id="twitter-btn" class="button-2"><i class="fa fa-twitter"></i>Login With Twitter</button>
+    
+
+              </form>
+              <div class="signup">
+
+                <span class="signup">Already have an account?
+                  
+                 <label for="check">Login</label>
+
+                </span>
+
+              </div>
+
+            </div>
+
+        </div>
     </main>
 </body>
 </html>
