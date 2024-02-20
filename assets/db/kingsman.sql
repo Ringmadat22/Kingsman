@@ -12,7 +12,11 @@ CREATE TABLE categories (
 );
 
 CREATE TABLE users (
-    
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(50),
+    password VARCHAR(50),
 )
 
 -- Create table for products
