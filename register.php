@@ -23,17 +23,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Attempt to execute the prepared statement
         if ($stmt->execute()) {
             // Redirect to login page after successful registration
-            header("location: login.php");
+            header("location: index.html");
             exit();
         } else {
-            echo "Something went wrong. Please try again later.";
+            echo "Error: " . $sql . "<br>" . $conn->error; // Display error message
         }
 
         // Close statement
         $stmt->close();
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error; // Display error message
     }
 
     // Close connection
     $conn->close();
 }
-?>
+?>;
