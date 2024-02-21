@@ -52,15 +52,9 @@ CREATE TABLE product_attributes (
 
 -- Sample data for product attributes
 INSERT INTO product_attributes (product_id, attribute_name, attribute_value) VALUES
-    (1, 'Color', 'Black'),
-    (1, 'Size', 'M'),
-    (2, 'Color', 'Blue'),
-    (2, 'Size', 'L'),
-    (3, 'Color', 'Red'),
-    (3, 'Size', 'S'),
-    (4, 'Color', 'Gray'),
-    (4, 'Size', 'M'),
-    (5, 'Color', 'White'),
-    (5, 'Size', 'L'),
-    (6, 'Color', 'Green'),
-    (6, 'Size', 'XL');
+  --  (1, 'Color', 'Black'),
+-- (1, 'Size', 'M'),
+   -- (2, 'Color', 'Blue'),
+    --(2, 'Size', 'L'),
+    --(3, 'Color', 'Red'),
+ 
