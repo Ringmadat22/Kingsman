@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <div class="header-top" data-header>
+    <div class="header-top" id="navbar-top" data-header>
       <div class="container">
 
         <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
@@ -52,21 +52,22 @@
           <span class="line line-3"></span>
         </button>
 
-        <div class="input-wrapper">
-          <input type="search" name="search" placeholder="Search product" class="search-field">
-
-          <button class="search-submit" aria-label="search">
-            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
+        
 
        <h1>KINGSMAN CLASSIC</h1>
 
         <div class="header-actions">
 
-          <button class="header-action-btn" aria-label="user">
-            <a href=""><ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon></a>
+          <!--
+            <button class="header-action-btn" aria-label="user">
+              <a href=""><ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon></a>
+            </button>
+          -->
+
+          <button class="header-action-btn login-btn">
+            <a href="">Login/Register</a>
           </button>
+          
 
           <button class="header-action-btn" aria-label="favourite item">
             
@@ -87,7 +88,7 @@
 
         </div>
 
-        <nav class="navbar">
+        <nav class="navbar" id="navbar-bottom" >
           <ul class="navbar-list">
 
             <li>
@@ -99,11 +100,43 @@
             </li>
     
             <li>
-                <a href="laundry.html" class="navbar-link" data-nav-link>LAUNDRY</a>
-              </li>
+              <div class="dropdown">
+                <button class="dropbtn">COLLECTION</button>
+                <div class="dropdown-content">
+                  <a href="#">SUITS</a>
+                  <a href="#">CASUAL WEAR</a>
+                  <a href="#">FOOT WEAR</a>
+                </div>
+              </div>
+            </li>
     
             <li>
-              <a href="#blog" class="navbar-link" data-nav-link>BLOG</a>
+              <div class="dropdown">
+                <button class="dropbtn">ACCESSORIES</button>
+                <div class="dropdown-content">
+                  <a href="#">BELTS</a>
+                  <a href="#">WATCHES</a>
+                  <a href="#">JEWELRY</a>
+                  <a href="#">HATS</a>
+                  <a href="#">SUNGLASSES & EYEWEAR</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn">MEN'S ESSENTIALS</button>
+                <div class="dropdown-content">
+                  <a href="#">SOCKS</a>
+                  <a href="#">UNDERWEAR</a>
+                  <a href="#">UNDERTSHIRTS</a>
+                  <a href="#">PERFUMES & DEODRANT</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="laundry.html" class="navbar-link" data-nav-link>OUR LAUNDRY</a>
             </li>
     
           </ul>
@@ -144,8 +177,44 @@
         </li>
 
         <li>
-            <a href="laundry.html" class="navbar-link" data-nav-link>LAUNDRY</a>
-          </li>
+          <div class="dropdown">
+            <button class="dropbtn">COLLECTION</button>
+            <div class="dropdown-content">
+              <a href="#">SUITS</a>
+              <a href="#">CASUAL WEAR</a>
+              <a href="#">FOOT WEAR</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">ACCESSORIES</button>
+            <div class="dropdown-content">
+              <a href="#">BELTS</a>
+              <a href="#">WATCHES</a>
+              <a href="#">JEWELRY</a>
+              <a href="#">HATS</a>
+              <a href="#">SUNGLASSES & EYEWEAR</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">MEN'S ESSENTIALS</button>
+            <div class="dropdown-content">
+              <a href="#">SOCKS</a>
+              <a href="#">UNDERWEAR</a>
+              <a href="#">UNDERTSHIRTS</a>
+              <a href="#">PERFUMES & DEODRANT</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a href="laundry.html" class="navbar-link" data-nav-link>OUR LAUNDRY</a>
+        </li>
 
         <li>
           <a href="#blog" class="navbar-link" data-nav-link>BLOG</a>
