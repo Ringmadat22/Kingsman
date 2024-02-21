@@ -435,6 +435,36 @@
     </div>
     <!-- Cart End -->
 
+    <!-- cart.html -->
+<ul id="cart">
+  <!-- Cart items will be added here -->
+</ul>
+
+<script>
+window.onload = function() {
+  var cartItems = localStorage.getItem('cartItems');
+  if (cartItems) {
+    cartItems = JSON.parse(cartItems);
+    var cartList = document.getElementById('cart');
+    cartItems.forEach(function(item) {
+      var li = document.createElement('li');
+      li.innerHTML = `
+        <div class="shop-card">
+          <!-- Render product information here -->
+          <div class="card-content">
+            <h3>${item.name}</h3>
+            <span>${item.price}</span>
+            <img src="${item.image}" alt="Product Image">
+          </div>
+        </div>
+      `;
+      cartList.appendChild(li);
+    });
+  }
+};
+</script>
+
+
 
 
 

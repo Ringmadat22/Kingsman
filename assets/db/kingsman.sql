@@ -6,30 +6,45 @@
 CREATE DATABASE kingsman,
 
 -- Create table for categories
-CREATE TABLE categories (
-    category_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(80) NOT NULL
+CREATE TABLE Categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE users (
-    user_id INT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    email VARCHAR(50),
-    password VARCHAR(50),
-)
+--Create table for users
+
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
 
 -- Create table for products
-CREATE TABLE products (
-    product_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    product_description VARCHAR(100) NOT NULL,
-    category_id INT NOT NULL,
+CREATE TABLE Products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
     price DECIMAL(10, 2) NOT NULL,
     color VARCHAR(50),
-    size VARCHAR(50) NOT NULL,
-    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+    image_url VARCHAR(255), -- Added column for image URL
+    category_id INT,
+    FOREIGN KEY (category_id) REFERENCES Categories(id)
 );
+
+
+INSERT INTO Products (name, description, price, color, image_url, category_id) VALUES
+('Running Shoes', 'Comfortable running shoes for athletes', 49.99, 'Black', 'image_url1.jpg', 1),
+('Slim Fit Suit', 'Formal slim fit suit for men', 199.99, 'Navy Blue', 'image_url2.jpg', 2),
+('Cotton Shirt', 'Casual cotton shirt for everyday wear', 29.99, 'White', 'image_url3.jpg', 3),
+('Denim Shorts', 'Stylish denim shorts for summer', 39.99, 'Blue', 'image_url4.jpg', 4),
+('Slim Fit Trousers', 'Slim fit trousers for a modern look', 49.99, 'Gray', 'image_url5.jpg', 5),
+('Classic Blazer', 'Classic blazer for formal occasions', 99.99, 'Black', 'image_url6.jpg', 6),
+('Analog Watch', 'Analog watch with leather strap', 79.99, 'Brown', 'image_url7.jpg', 7);
+
+
 
 -- Create table for product attributes
 CREATE TABLE product_attributes (
