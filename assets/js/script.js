@@ -157,3 +157,29 @@ function filterItems() {
         }
     }
 }
+
+
+function sortProducts() {
+  var selectBox = document.getElementById("sort-select");
+  var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  var productsContainer = document.getElementById("products");
+  var products = Array.from(productsContainer.getElementsByClassName("product"));
+
+  if (selectedValue === "highest") {
+    products.sort(function(a, b) {
+      return b.dataset.price - a.dataset.price;
+    });
+  } else if (selectedValue === "lowest") {
+    products.sort(function(a, b) {
+      return a.dataset.price - b.dataset.price;
+    });
+  }
+
+  // Clear existing products
+  productsContainer.innerHTML = "";
+
+  // Append sorted products
+  products.forEach(function(product) {
+    productsContainer.appendChild(product);
+  });
+}
