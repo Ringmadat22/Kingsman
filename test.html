@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Filter</title>
+<style>
+  /* Add your CSS styles here */
+</style>
+</head>
+<body>
+
+<div class="new-sort-main">
+  <div class="custom-select">
+    <select id="sort-select" onchange="sortProducts()">
+      <option value="">SORT BY</option>
+      <option value="recommended">Recommended</option>
+      <option value="highest">Highest Price</option>
+      <option value="lowest">Lowest Price</option>
+    </select>
+  </div>
+</div>
+
+<div id="products">
+  <!-- Your product listing goes here -->
+  <div class="product" data-price="100">Product 1 - $100</div>
+  <div class="product" data-price="50">Product 2 - $50</div>
+  <div class="product" data-price="200">Product 3 - $200</div>
+  <div class="product" data-price="75">Product 4 - $75</div>
+</div>
+
+<script>
+  function sortProducts() {
+    var selectBox = document.getElementById("sort-select");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    var productsContainer = document.getElementById("products");
+    var products = Array.from(productsContainer.getElementsByClassName("product"));
+
+    if (selectedValue === "highest") {
+      products.sort(function(a, b) {
+        return b.dataset.price - a.dataset.price;
+      });
+    } else if (selectedValue === "lowest") {
+      products.sort(function(a, b) {
+        return a.dataset.price - b.dataset.price;
+      });
+    }
+
+    // Clear existing products
+    productsContainer.innerHTML = "";
+
+    // Append sorted products
+    products.forEach(function(product) {
+      productsContainer.appendChild(product);
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -55,6 +55,6 @@ INSERT INTO product_attributes (product_id, attribute_name, attribute_value) VAL
   --  (1, 'Color', 'Black'),
 -- (1, 'Size', 'M'),
    -- (2, 'Color', 'Blue'),
-    --(2, 'Size', 'L'),
-    --(3, 'Color', 'Red'),
+    -- (2, 'Size', 'L'),
+    -- (3, 'Color', 'Red'),
  
