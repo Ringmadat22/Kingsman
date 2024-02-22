@@ -158,28 +158,52 @@ function filterItems() {
     }
 }
 
-
 function sortProducts() {
   var selectBox = document.getElementById("sort-select");
   var selectedValue = selectBox.options[selectBox.selectedIndex].value;
   var productsContainer = document.getElementById("products");
-  var products = Array.from(productsContainer.getElementsByClassName("product"));
+  var productItems = Array.from(productsContainer.getElementsByClassName("scrollbar-item"));
 
   if (selectedValue === "highest") {
-    products.sort(function(a, b) {
-      return b.dataset.price - a.dataset.price;
-    });
+      productItems.sort(function(a, b) {
+          return b.querySelector('.product').dataset.price - a.querySelector('.product').dataset.price;
+      });
   } else if (selectedValue === "lowest") {
-    products.sort(function(a, b) {
-      return a.dataset.price - b.dataset.price;
-    });
+      productItems.sort(function(a, b) {
+          return a.querySelector('.product').dataset.price - b.querySelector('.product').dataset.price;
+      });
   }
 
-  // Clear existing products
-  productsContainer.innerHTML = "";
-
-  // Append sorted products
-  products.forEach(function(product) {
-    productsContainer.appendChild(product);
+  // Append sorted products back into the container
+  productItems.forEach(function(item) {
+      productsContainer.appendChild(item);
   });
 }
+
+// Function to filter products based on price range
+function filterProductsByPrice() {
+  // Get the minimum and maximum price values from the input fields
+  var minPrice = parseInt(document.querySelector('.input-min').value);
+  var maxPrice = parseInt(document.querySelector('.input-max').value);
+
+  // Get all product items
+  var productItems = document.querySelectorAll('.scrollbar-item');
+
+  // Loop through each product item
+  productItems.forEach(function(item) {
+      // Get the price of the current product item
+      var price = parseInt(item.querySelector('.product').getAttribute('data-price'));
+
+      // If the price falls within the selected range, display the product
+      if (price >= minPrice && price <= maxPrice) {
+          item.style.display = 'block';
+      } else {
+          // Otherwise, hide the product
+          item.style.display = 'none';
+      }
+  });
+}
+
+// Add event listeners to input fields and range inputs for price filtering
+document.querySelector('.input-min').addEventListener('input', filterProductsByPrice);
+document.querySelector('.input-max').addEventListener('input', filterProductsByPrice);

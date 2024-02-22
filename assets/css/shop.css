@@ -702,3 +702,65 @@ select {
   border-top: var(--size) solid rgb(255, 255, 255);
   top: 55%;
 }
+
+
+/*
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust min and max width as needed 
+  gap: 20px; /* Adjust the gap between cards 
+  padding: 20px; /* Adjust container padding 
+}
+
+.shop-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.card-banner img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.price {
+  margin-bottom: 10px;
+}
+
+.price .del {
+  color: red;
+}
+
+.price .span {
+  font-weight: bold;
+}
+
+.card-title {
+  color: #333;
+  text-decoration: none;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating-wrapper ion-icon {
+  color: gold;
+}
+
+.rating-text {
+  margin-left: 5px;
+  color: #666;
+}
+
+*/

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Product Filter</title>
+<link rel="stylesheet" href="assets/css/shop.css">
 <style>
   /* Add your CSS styles here */
 </style>
@@ -21,40 +22,151 @@
   </div>
 </div>
 
-<div id="products">
-  <!-- Your product listing goes here -->
-  <div class="product" data-price="100">Product 1 - $100</div>
-  <div class="product" data-price="50">Product 2 - $50</div>
-  <div class="product" data-price="200">Product 3 - $200</div>
-  <div class="product" data-price="75">Product 4 - $75</div>
-</div>
+
+<ul id="products">
+    <li class="scrollbar-item" data-price="299" >
+        <div class="shop-card product" data-price="299">
+
+          <div class="card-banner img-holder" style="--width: 540; --height: 720;">
+            <img src="./assets/product-images/dark-blue-2.jpeg" width="540" height="720" loading="lazy"
+              alt="" class="img-cover">
+
+            <span class="badge" aria-label="20% off">-20%</span>
+
+            <div class="card-actions">
+
+              <button class="action-btn" aria-label="add to cart">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+              <button class="action-btn" aria-label="add to whishlist">
+                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+              <button class="action-btn" aria-label="compare">
+                <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+            </div>
+          </div>
+
+          <div class="card-content">
+
+            <div class="price">
+              <del class="del">$399.00</del>
+
+              <span  class="span">$299.00</span>
+            </div>
+
+            <h3>
+              <a href="#" class="card-title">Men Black Suit</a>
+            </h3>
+
+            <div class="card-rating">
+
+              <div class="rating-wrapper" aria-label="5 start rating">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+
+              <p class="rating-text">5170 reviews</p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li class="scrollbar-item"  >
+        <div class="shop-card product" data-price="400">
+
+          <div class="card-banner img-holder" style="--width: 540; --height: 720;">
+            <img src="./assets/product-images/gray-1.jpeg" width="540" height="720" loading="lazy"
+              alt="" class="img-cover">
+
+            <span class="badge" aria-label="20% off">-20%</span>
+
+            <div class="card-actions">
+
+              <button class="action-btn" aria-label="add to cart">
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+              <button class="action-btn" aria-label="add to whishlist">
+                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+              <button class="action-btn" aria-label="compare">
+                <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+              </button>
+
+            </div>
+            
+          </div>
+
+          <div class="card-content">
+
+            <div class="price">
+              <del class="del">$399.00</del>
+
+              <span  class="span product">$400.00</span>
+            </div>
+
+            <h3>
+              <a href="#" class="card-title">Men Black Suit</a>
+            </h3>
+
+            <div class="card-rating">
+
+              <div class="rating-wrapper" aria-label="5 start rating">
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+                <ion-icon name="star" aria-hidden="true"></ion-icon>
+              </div>
+
+              <p class="rating-text">5170 reviews</p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+</ul>
 
 <script>
-  function sortProducts() {
-    var selectBox = document.getElementById("sort-select");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    var productsContainer = document.getElementById("products");
-    var products = Array.from(productsContainer.getElementsByClassName("product"));
-
-    if (selectedValue === "highest") {
-      products.sort(function(a, b) {
-        return b.dataset.price - a.dataset.price;
-      });
-    } else if (selectedValue === "lowest") {
-      products.sort(function(a, b) {
-        return a.dataset.price - b.dataset.price;
+    function sortProducts() {
+      var selectBox = document.getElementById("sort-select");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+      var productsContainer = document.getElementById("products");
+      var productItems = Array.from(productsContainer.getElementsByClassName("scrollbar-item"));
+  
+      if (selectedValue === "highest") {
+        productItems.sort(function(a, b) {
+          return b.querySelector('.product').dataset.price - a.querySelector('.product').dataset.price;
+        });
+      } else if (selectedValue === "lowest") {
+        productItems.sort(function(a, b) {
+          return a.querySelector('.product').dataset.price - b.querySelector('.product').dataset.price;
+        });
+      }
+  
+      // Clear existing products
+      productsContainer.innerHTML = "";
+  
+      // Append sorted products
+      productItems.forEach(function(item) {
+        productsContainer.appendChild(item);
       });
     }
-
-    // Clear existing products
-    productsContainer.innerHTML = "";
-
-    // Append sorted products
-    products.forEach(function(product) {
-      productsContainer.appendChild(product);
-    });
-  }
-</script>
+  </script>
+  
 
 </body>
 </html>
