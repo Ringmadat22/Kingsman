@@ -1,8 +1,3 @@
---CREATE DATABASE
--- ####################################################################
--- # Basic CREATE DATABASE statement
--- # See https://www.ibm.com/docs/en/db2-for-zos/13?topic=statements-create-database for complete syntax.
--- ####################################################################
 CREATE DATABASE kingsman,
 
 -- Create table for categories
@@ -24,7 +19,7 @@ CREATE TABLE Users (
 
 -- Create table for products
 CREATE TABLE Products (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    prooduct_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
     price DECIMAL(10, 2) NOT NULL,
@@ -57,15 +52,9 @@ CREATE TABLE product_attributes (
 
 -- Sample data for product attributes
 INSERT INTO product_attributes (product_id, attribute_name, attribute_value) VALUES
-    (1, 'Color', 'Black'),
-    (1, 'Size', 'M'),
-    (2, 'Color', 'Blue'),
-    (2, 'Size', 'L'),
-    (3, 'Color', 'Red'),
-    (3, 'Size', 'S'),
-    (4, 'Color', 'Gray'),
-    (4, 'Size', 'M'),
-    (5, 'Color', 'White'),
-    (5, 'Size', 'L'),
-    (6, 'Color', 'Green'),
-    (6, 'Size', 'XL');
+  --  (1, 'Color', 'Black'),
+-- (1, 'Size', 'M'),
+   -- (2, 'Color', 'Blue'),
+    --(2, 'Size', 'L'),
+    --(3, 'Color', 'Red'),
+ 
