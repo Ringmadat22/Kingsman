@@ -207,3 +207,34 @@ function filterProductsByPrice() {
 // Add event listeners to input fields and range inputs for price filtering
 document.querySelector('.input-min').addEventListener('input', filterProductsByPrice);
 document.querySelector('.input-max').addEventListener('input', filterProductsByPrice);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all checkboxes
+  var checkboxes = document.querySelectorAll('.material-checkbox input[type="checkbox"]');
+
+  checkboxes.forEach(function(checkbox) {
+      // Add event listener to each checkbox
+      checkbox.addEventListener("change", function() {
+          // Get the color value of the checkbox
+          var color = checkbox.parentNode.textContent.trim();
+
+          // Get all product items
+          var productItems = document.querySelectorAll('.scrollbar-item');
+
+          // Loop through each product item
+          productItems.forEach(function(item) {
+              var productColor = item.querySelector('.shop-card.product').dataset.color;
+
+              // Check if the product item matches the selected color
+              if (color === productColor || color === "Select Color") {
+                  // Show the product item
+                  item.style.display = "block";
+              } else {
+                  // Hide the product item
+                  item.style.display = "none";
+              }
+          });
+      });
+  });
+});

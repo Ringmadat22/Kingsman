@@ -266,20 +266,20 @@
                   <div class="price-input">
                     <div class="field">
                       <span>Min</span>
-                      <input type="number" class="input-min" value="5000">
+                      <input type="number" class="input-min" value="100">
                     </div>
                     <div class="separator">-</div>
                     <div class="field">
                       <span>Max</span>
-                      <input type="number" class="input-max" value="75000">
+                      <input type="number" class="input-max" value="2500">
                     </div>
                   </div>
                   <div class="slider">
                     <div class="progress"></div>
                   </div>
                   <div class="range-input">
-                    <input type="range" class="range-min" min="0" max="100000" value="2500" step="100">
-                    <input type="range" class="range-max" min="0" max="100000" value="7500" step="100">
+                    <input type="range" class="range-min" min="50" max="5000" value="5000" step="100">
+                    <input type="range" class="range-max" min="50" max="5000" value="5000" step="100">
                   </div>
                 </div>
 
@@ -307,124 +307,67 @@
                 </div>
 
                 <div class="color">
-        
                   <div class="color-content">
-
                       <h2>Select Color</h2>
-
                       <div class="divider"></div>
-
                       <div class="item-lists">
-
                           <form class="color-form">
-
                               <div class="color-form-1">
-
                                   <div class="checkbox-1">
-
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Black
+                                          <span class="checkmark" style="background-color: blue;"></span>
+                                          Blue
                                       </label>
-                                      
                                   </div>
                                   <div class="checkbox-1">
-
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          White
+                                          <span class="checkmark" style="background-color: gray;"></span>
+                                          Gray
                                       </label>
-                                      
                                   </div>
                                   <div class="checkbox-1">
-
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark"></span>
+                                          <span class="checkmark" style="background-color: beige;"></span>
                                           Beige
                                       </label>
-                                      
                                   </div>
                                   <div class="checkbox-1">
-
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark"></span>
+                                          <span class="checkmark" style="background-color: red;"></span>
                                           Red
                                       </label>
-                                      
                                   </div>
                                   <div class="checkbox-1">
-
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Red
-                                      </label>
-                                      
-                                  </div>
-                              
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
+                                          <span class="checkmark" style="background-color: brown;"></span>
                                           Brown
                                       </label>
-                                      
                                   </div>
-
                                   <div class="checkbox-1">
-
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark"></span>
+                                          <span class="checkmark" style="background-color: green;"></span>
                                           Green
                                       </label>
-                                      
                                   </div>
-
                                   <div class="checkbox-1">
-
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark"></span>
+                                          <span class="checkmark" style="background-color: orange;"></span>
                                           Orange
                                       </label>
-                                      
                                   </div>
-
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Checkbox Label
-                                      </label>
-                                      
-                                  </div>
-
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Checkbox Label
-                                      </label>
-                                      
-                                  </div>
-
                               </div>
-                              
-                          </form>.
-                          
+                          </form>
                       </div>
-
                   </div>
-
-                </div>
+              </div>
+              
 
                 <div class="size">
         
@@ -679,7 +622,7 @@
                   <ul class="first-ul has-scrollbar" id="products">
 
                     <li class="scrollbar-item" data-price="299" >
-                      <div class="shop-card product" data-price="299">
+                      <div class="shop-card product" data-price="299" data-color="blue">
               
                         <div class="card-banner img-holder" style="--width: 540; --height: 720;">
                           <img src="./assets/product-images/dark-blue-2.jpeg" width="540" height="720" loading="lazy"
@@ -736,7 +679,7 @@
                     </li>
               
                     <li class="scrollbar-item"  >
-                      <div class="shop-card product" data-price="400">
+                      <div class="shop-card product" data-price="400" data-color="gray">
               
                         <div class="card-banner img-holder" style="--width: 540; --height: 720;">
                           <img src="./assets/product-images/gray-1.jpeg" width="540" height="720" loading="lazy"
@@ -907,7 +850,7 @@
               
                       </div>
                     </li>
-                    
+
                   </ul>
 
                   <ul class="first-ul has-scrollbar" id="">
