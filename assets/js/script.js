@@ -157,29 +157,37 @@ function filterItems() {
         }
     }
 }
-
 function sortProducts() {
-  var selectBox = document.getElementById("sort-select");
-  var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-  var productsContainer = document.getElementById("products");
-  var productItems = Array.from(productsContainer.getElementsByClassName("scrollbar-item"));
+  var selectElement = document.getElementById("sort-select");
+  var selectedValue = selectElement.value;
+  var productList = document.getElementById("product-list");
+  var items = Array.from(productList.children);
 
+  // Sort the items based on the selected option
   if (selectedValue === "highest") {
-      productItems.sort(function(a, b) {
-          return b.querySelector('.product').dataset.price - a.querySelector('.product').dataset.price;
+      items.sort((a, b) => {
+          var priceA = parseFloat(a.querySelector(".span").textContent.replace("$", ""));
+          var priceB = parseFloat(b.querySelector(".span").textContent.replace("$", ""));
+          return priceB - priceA;
       });
   } else if (selectedValue === "lowest") {
-      productItems.sort(function(a, b) {
-          return a.querySelector('.product').dataset.price - b.querySelector('.product').dataset.price;
+      items.sort((a, b) => {
+          var priceA = parseFloat(a.querySelector(".span").textContent.replace("$", ""));
+          var priceB = parseFloat(b.querySelector(".span").textContent.replace("$", ""));
+          return priceA - priceB;
       });
   }
 
-  // Append sorted products back into the container
-  productItems.forEach(function(item) {
-      productsContainer.appendChild(item);
+  // Remove existing items from the list
+  while (productList.firstChild) {
+      productList.removeChild(productList.firstChild);
+  }
+
+  // Append sorted items back to the list
+  items.forEach(item => {
+      productList.appendChild(item);
   });
 }
-
 // Function to filter products based on price range
 function filterProductsByPrice() {
   // Get the minimum and maximum price values from the input fields

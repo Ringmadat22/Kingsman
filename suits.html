@@ -6,6 +6,7 @@
     <title>SUITS | KINGSMAN</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="assets/css/suits.css">
+    <script src="assets/js/suits.js"></script>
 </head>
 <body>
 
@@ -416,23 +417,23 @@
                 <div class="suit-content-container">
                     <div class="shop-content-section">
 
-                        <section class="new-sort-main">
+                        <div class="new-sort-main">
                             <div class="custom-select">
-                              <select id="sort-select" onchange="sortProducts()">
+                              <select id="sort-select" onchange="filterProducts()">
                                 <option value="">SORT BY</option>
                                 <option value="recommended">Recommended</option>
                                 <option value="highest">Highest Price</option>
                                 <option value="lowest">Lowest Price</option>
                               </select>
                             </div>
-                        </section>
+                        </div>
 
                         <section class="suits-bottom-content">
                             <div class="suits-bottom-main-div">
                                 <ul class="suits-ul" id="products">
                                     <li class="suits-item">
                                         <div class="shop-card product" data-price="200" data-color="aliceblue">
-                                            <div class="card-banner">
+                                        <div class="card-banner">
                                                 <div class="suit-img-div">
                                                     <img src="assets/product-images/aliceblue.jpeg" alt="">
                                                 </div>

@@ -704,6 +704,29 @@ select {
 }
 
 
+.suits-ul div{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 98px;
+}
+
+.suits-item{
+  width: calc(25% - 20px); /* 4 items per row, considering margin */
+  margin: 10px;
+  margin-bottom: 60px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(128, 128, 128, 0.436);
+  border-radius: 7px;
+}
+
+.suits-item img {
+  width: 100%;
+  height: 300px;
+}
+
+
 /*
 
 

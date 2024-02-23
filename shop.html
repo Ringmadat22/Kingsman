@@ -237,7 +237,6 @@
     <section class="shop-main-section">
       <div class="shop-container">
         <section class="top-shop-section">
-          
           <ul class="breadcrumb">
             <li><a href="#">HOME&nbsp; &#8260; &nbsp;</a></li>
             <li><a href="#"> SHOP &#8260; &nbsp;</a></li>
@@ -267,20 +266,20 @@
                   <div class="price-input">
                     <div class="field">
                       <span>Min</span>
-                      <input type="number" class="input-min" value="100">
+                      <input type="number" class="input-min" value="5000">
                     </div>
                     <div class="separator">-</div>
                     <div class="field">
                       <span>Max</span>
-                      <input type="number" class="input-max" value="2500">
+                      <input type="number" class="input-max" value="75000">
                     </div>
                   </div>
                   <div class="slider">
                     <div class="progress"></div>
                   </div>
                   <div class="range-input">
-                    <input type="range" class="range-min" min="50" max="5000" value="5000" step="100">
-                    <input type="range" class="range-max" min="50" max="5000" value="5000" step="100">
+                    <input type="range" class="range-min" min="0" max="100000" value="2500" step="100">
+                    <input type="range" class="range-max" min="0" max="100000" value="7500" step="100">
                   </div>
                 </div>
 
@@ -308,67 +307,124 @@
                 </div>
 
                 <div class="color">
+        
                   <div class="color-content">
+
                       <h2>Select Color</h2>
+
                       <div class="divider"></div>
+
                       <div class="item-lists">
+
                           <form class="color-form">
+
                               <div class="color-form-1">
+
                                   <div class="checkbox-1">
+
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark" style="background-color: blue;"></span>
-                                          Blue
+                                          <span class="checkmark"></span>
+                                          Black
                                       </label>
+                                      
                                   </div>
                                   <div class="checkbox-1">
+
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark" style="background-color: gray;"></span>
-                                          Gray
+                                          <span class="checkmark"></span>
+                                          White
                                       </label>
+                                      
                                   </div>
                                   <div class="checkbox-1">
+
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark" style="background-color: beige;"></span>
+                                          <span class="checkmark"></span>
                                           Beige
                                       </label>
+                                      
                                   </div>
                                   <div class="checkbox-1">
+
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark" style="background-color: red;"></span>
+                                          <span class="checkmark"></span>
                                           Red
                                       </label>
+                                      
                                   </div>
                                   <div class="checkbox-1">
+
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark" style="background-color: brown;"></span>
+                                          <span class="checkmark"></span>
+                                          Red
+                                      </label>
+                                      
+                                  </div>
+                              
+                                  <div class="checkbox-1">
+
+                                      <label class="material-checkbox">
+                                          <input type="checkbox">
+                                          <span class="checkmark"></span>
                                           Brown
                                       </label>
+                                      
                                   </div>
+
                                   <div class="checkbox-1">
+
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark" style="background-color: green;"></span>
+                                          <span class="checkmark"></span>
                                           Green
                                       </label>
+                                      
                                   </div>
+
                                   <div class="checkbox-1">
+
                                       <label class="material-checkbox">
                                           <input type="checkbox">
-                                          <span class="checkmark" style="background-color: orange;"></span>
+                                          <span class="checkmark"></span>
                                           Orange
                                       </label>
+                                      
                                   </div>
+
+                                  <div class="checkbox-1">
+
+                                      <label class="material-checkbox">
+                                          <input type="checkbox">
+                                          <span class="checkmark"></span>
+                                          Checkbox Label
+                                      </label>
+                                      
+                                  </div>
+
+                                  <div class="checkbox-1">
+
+                                      <label class="material-checkbox">
+                                          <input type="checkbox">
+                                          <span class="checkmark"></span>
+                                          Checkbox Label
+                                      </label>
+                                      
+                                  </div>
+
                               </div>
-                          </form>
+                              
+                          </form>.
+                          
                       </div>
+
                   </div>
-              </div>
-              
+
+                </div>
 
                 <div class="size">
         
@@ -610,58 +666,57 @@
 
                   <div class="new-sort-main">
                     <div class="custom-select">
-                      <select id="sort-select" onchange="sortProducts()">
+                      <select>
                         <option value="">SORT BY</option>
-                        <option value="recommended">Recommended</option>
-                        <option value="highest">Highest Price</option>
-                        <option value="lowest">Lowest Price</option>
+                        <option value="">Recommended</option>
+                        <option value="">Highest Price</option>
+                        <option value="">Lowwest Price</option>
                       </select>
                     </div>
                   </div>
                   
 
-                  <ul class="first-ul has-scrollbar" id="products">
-
-                    <li class="scrollbar-item" data-price="299" >
-                      <div class="shop-card product" data-price="299" data-color="blue">
-              
+                  <ul class="first-ul has-scrollbar">
+                    <li class="scrollbar-item has-scrollbar-li">
+                      <div data-price="100" class="shop-card">
+        
                         <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                          <img src="./assets/product-images/dark-blue-2.jpeg" width="540" height="720" loading="lazy"
+                          <img src="./assets/product-images/aliceblue.jpeg" width="540" height="720" loading="lazy"
                             alt="" class="img-cover">
-              
+        
                           <span class="badge" aria-label="20% off">-20%</span>
-              
+        
                           <div class="card-actions">
-              
+        
                             <button class="action-btn" aria-label="add to cart">
                               <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                             </button>
-              
+        
                             <button class="action-btn" aria-label="add to whishlist">
                               <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
                             </button>
-              
+        
                             <button class="action-btn" aria-label="compare">
                               <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
                             </button>
-              
+        
                           </div>
                         </div>
-              
+        
                         <div class="card-content">
-              
+        
                           <div class="price">
                             <del class="del">$399.00</del>
-              
-                            <span  class="span">$299.00</span>
+        
+                            <span data-price="100" class="span">$100.00</span>
                           </div>
-              
+        
                           <h3>
-                            <a href="#" class="card-title">Men Black Suit</a>
+                            <a href="product.html" class="card-title">Men Black Suit</a>
                           </h3>
-              
+        
                           <div class="card-rating">
-              
+        
                             <div class="rating-wrapper" aria-label="5 start rating">
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
@@ -669,114 +724,56 @@
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
                             </div>
-              
+        
                             <p class="rating-text">5170 reviews</p>
-              
+        
                           </div>
-              
+        
                         </div>
-              
-                      </div>
-                    </li>
-              
-                    <li class="scrollbar-item"  >
-                      <div class="shop-card product" data-price="400" data-color="gray">
-              
-                        <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                          <img src="./assets/product-images/gray-1.jpeg" width="540" height="720" loading="lazy"
-                            alt="" class="img-cover">
-              
-                          <span class="badge" aria-label="20% off">-20%</span>
-              
-                          <div class="card-actions">
-              
-                            <button class="action-btn" aria-label="add to cart">
-                              <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                            </button>
-              
-                            <button class="action-btn" aria-label="add to whishlist">
-                              <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                            </button>
-              
-                            <button class="action-btn" aria-label="compare">
-                              <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                            </button>
-              
-                          </div>
-                          
-                        </div>
-              
-                        <div class="card-content">
-              
-                          <div class="price">
-                            <del class="del">$399.00</del>
-              
-                            <span  class="span product">$400.00</span>
-                          </div>
-              
-                          <h3>
-                            <a href="#" class="card-title">Men Black Suit</a>
-                          </h3>
-              
-                          <div class="card-rating">
-              
-                            <div class="rating-wrapper" aria-label="5 start rating">
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                            </div>
-              
-                            <p class="rating-text">5170 reviews</p>
-              
-                          </div>
-              
-                        </div>
-              
+        
                       </div>
                     </li>
 
-                    <li class="scrollbar-item" data-price="299" >
-                      <div class="shop-card product" data-price="299">
-              
+                    <li class="scrollbar-item">
+                      <div data-price="600" class="shop-card">
+        
                         <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                          <img src="./assets/product-images/dark-blue-2.jpeg" width="540" height="720" loading="lazy"
+                          <img src="./assets/product-images/black.jpeg" width="540" height="720" loading="lazy"
                             alt="" class="img-cover">
-              
+        
                           <span class="badge" aria-label="20% off">-20%</span>
-              
+        
                           <div class="card-actions">
-              
+        
                             <button class="action-btn" aria-label="add to cart">
                               <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
                             </button>
-              
+        
                             <button class="action-btn" aria-label="add to whishlist">
                               <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
                             </button>
-              
+        
                             <button class="action-btn" aria-label="compare">
                               <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
                             </button>
-              
+        
                           </div>
                         </div>
-              
+        
                         <div class="card-content">
-              
+        
                           <div class="price">
-                            <del class="del">$399.00</del>
-              
-                            <span  class="span">$299.00</span>
+                            <del  class="del">$399.00</del>
+        
+                            <span data-price="299" class="span">$299.00</span>
                           </div>
-              
+        
                           <h3>
                             <a href="#" class="card-title">Men Black Suit</a>
                           </h3>
-              
+        
                           <div class="card-rating">
-              
+        
                             <div class="rating-wrapper" aria-label="5 start rating">
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
@@ -784,80 +781,133 @@
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
                               <ion-icon name="star" aria-hidden="true"></ion-icon>
                             </div>
-              
+        
                             <p class="rating-text">5170 reviews</p>
-              
+        
                           </div>
-              
+        
                         </div>
-              
-                      </div>
-                    </li>
-              
-                    <li class="scrollbar-item"  >
-                      <div class="shop-card product" data-price="400">
-              
-                        <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-                          <img src="./assets/product-images/gray-1.jpeg" width="540" height="720" loading="lazy"
-                            alt="" class="img-cover">
-              
-                          <span class="badge" aria-label="20% off">-20%</span>
-              
-                          <div class="card-actions">
-              
-                            <button class="action-btn" aria-label="add to cart">
-                              <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-                            </button>
-              
-                            <button class="action-btn" aria-label="add to whishlist">
-                              <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-                            </button>
-              
-                            <button class="action-btn" aria-label="compare">
-                              <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-                            </button>
-              
-                          </div>
-                          
-                        </div>
-              
-                        <div class="card-content">
-              
-                          <div class="price">
-                            <del class="del">$399.00</del>
-              
-                            <span  class="span product">$400.00</span>
-                          </div>
-              
-                          <h3>
-                            <a href="#" class="card-title">Men Black Suit</a>
-                          </h3>
-              
-                          <div class="card-rating">
-              
-                            <div class="rating-wrapper" aria-label="5 start rating">
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                              <ion-icon name="star" aria-hidden="true"></ion-icon>
-                            </div>
-              
-                            <p class="rating-text">5170 reviews</p>
-              
-                          </div>
-              
-                        </div>
-              
+        
                       </div>
                     </li>
 
+                    <li class="scrollbar-item">
+                      <div class="shop-card">
+        
+                        <div class="card-banner img-holder" style="--width: 540; --height: 720;">
+                          <img src="./assets/product-images/blue-1.jpeg" width="540" height="720" loading="lazy"
+                            alt="" class="img-cover">
+        
+                          <span class="badge" aria-label="20% off">-20%</span>
+        
+                          <div class="card-actions">
+        
+                            <button class="action-btn" aria-label="add to cart">
+                              <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                            </button>
+        
+                            <button class="action-btn" aria-label="add to whishlist">
+                              <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                            </button>
+        
+                            <button class="action-btn" aria-label="compare">
+                              <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                            </button>
+        
+                          </div>
+                        </div>
+        
+                        <div class="card-content">
+        
+                          <div class="price">
+                            <del class="del">$399.00</del>
+        
+                            <span data-price="499" class="span">$499.00</span>
+                          </div>
+        
+                          <h3>
+                            <a href="#" class="card-title">Men Black Suit</a>
+                          </h3>
+        
+                          <div class="card-rating">
+        
+                            <div class="rating-wrapper" aria-label="5 start rating">
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                            </div>
+        
+                            <p class="rating-text">5170 reviews</p>
+        
+                          </div>
+        
+                        </div>
+        
+                      </div>
+                    </li>
+
+                    <li class="scrollbar-item">
+                      <div class="shop-card">
+        
+                        <div class="card-banner img-holder" style="--width: 540; --height: 720;">
+                          <img src="./assets/product-images/brown.jpeg" width="540" height="720" loading="lazy"
+                            alt="" class="img-cover">
+        
+        
+                          <div class="card-actions">
+        
+                            <button class="action-btn" aria-label="add to cart">
+                              <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                            </button>
+        
+                            <button class="action-btn" aria-label="add to whishlist">
+                              <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                            </button>
+        
+                            <button class="action-btn" aria-label="compare">
+                              <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                            </button>
+        
+                          </div>
+                        </div>
+        
+                        <div class="card-content">
+        
+                          <div class="price">
+                            <del class="del">$399.00</del>
+        
+                            <span class="span">$299.00</span>
+                          </div>
+        
+                          <h3>
+                            <a href="#" class="card-title">Men Black Suit</a>
+                          </h3>
+        
+                          <div class="card-rating">
+        
+                            <div class="rating-wrapper" aria-label="5 start rating">
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                              <ion-icon name="star" aria-hidden="true"></ion-icon>
+                            </div>
+        
+                            <p class="rating-text">5170 reviews</p>
+        
+                          </div>
+        
+                        </div>
+        
+                      </div>
+                    </li>
                   </ul>
 
-                  <ul class="first-ul has-scrollbar" id="">
-                    <li class="scrollbar-item" data-price="299" >
-
-                      <div class="shop-card product" >
+                  <ul class="first-ul has-scrollbar">
+                    <li class="scrollbar-item">
+                      <div class="shop-card">
         
                         <div class="card-banner img-holder" style="--width: 540; --height: 720;">
                           <img src="./assets/product-images/dark-blue-2.jpeg" width="540" height="720" loading="lazy"
@@ -887,7 +937,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span  class="span">$299.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -913,8 +963,8 @@
                       </div>
                     </li>
 
-                    <li class="scrollbar-item"  >
-                      <div class="shop-card product" data-price="400">
+                    <li class="scrollbar-item">
+                      <div class="shop-card">
         
                         <div class="card-banner img-holder" style="--width: 540; --height: 720;">
                           <img src="./assets/product-images/gray-1.jpeg" width="540" height="720" loading="lazy"
@@ -944,7 +994,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span  class="span product">$400.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -1001,7 +1051,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span  data-price="500" class="span product">$550.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -1058,7 +1108,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span data-price="350" class="span product">$359.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -1117,7 +1167,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span data-price="299" class="span product">$299.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -1174,7 +1224,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span data-price="600" class="span">$600.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -1231,7 +1281,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span data-price="500" class="span">$590.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -1288,7 +1338,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span data-price="100" class="span">$109.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>
@@ -1347,7 +1397,7 @@
                           <div class="price">
                             <del class="del">$399.00</del>
         
-                            <span data-price="200" class="span">$209.00</span>
+                            <span class="span">$299.00</span>
                           </div>
         
                           <h3>

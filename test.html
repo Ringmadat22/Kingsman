@@ -11,161 +11,691 @@
 </head>
 <body>
 
-<div class="new-sort-main">
-  <div class="custom-select">
-    <select id="sort-select" onchange="sortProducts()">
-      <option value="">SORT BY</option>
-      <option value="recommended">Recommended</option>
-      <option value="highest">Highest Price</option>
-      <option value="lowest">Lowest Price</option>
-    </select>
-  </div>
-</div>
-
-
-<ul id="products">
-    <li class="scrollbar-item" >
-        <div class="shop-card product"  data-price="299" >
-
-          <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-            <img src="./assets/product-images/dark-blue-2.jpeg" width="540" height="720" loading="lazy"
-              alt="" class="img-cover">
-
-            <span class="badge" aria-label="20% off">-20%</span>
-
-            <div class="card-actions">
-
-              <button class="action-btn" aria-label="add to cart">
-                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-              <button class="action-btn" aria-label="add to whishlist">
-                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-              <button class="action-btn" aria-label="compare">
-                <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-            </div>
-          </div>
-
-          <div class="card-content">
-
-            <div class="price">
-              <del class="del">$399.00</del>
-
-              <span  class="span">$299.00</span>
-            </div>
-
-            <h3>
-              <a href="#" class="card-title">Men Black Suit</a>
-            </h3>
-
-            <div class="card-rating">
-
-              <div class="rating-wrapper" aria-label="5 start rating">
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-              </div>
-
-              <p class="rating-text">5170 reviews</p>
-
-            </div>
-
-          </div>
-
+    <div class="new-sort-main">
+        <div class="custom-select">
+          <select id="sort-select" onchange="filterProducts()">
+            <option value="">SORT BY</option>
+            <option value="recommended">Recommended</option>
+            <option value="highest">Highest Price</option>
+            <option value="lowest">Lowest Price</option>
+          </select>
         </div>
-      </li>
+      </div>
+      
 
-      <li class="scrollbar-item"  >
-        <div class="shop-card product" data-price="400" >
+<ul class="suits-ul" id="products">
 
-          <div class="card-banner img-holder" style="--width: 540; --height: 720;">
-            <img src="./assets/product-images/gray-1.jpeg" width="540" height="720" loading="lazy"
-              alt="" class="img-cover">
-
-            <span class="badge" aria-label="20% off">-20%</span>
-
-            <div class="card-actions">
-
-              <button class="action-btn" aria-label="add to cart">
-                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-              <button class="action-btn" aria-label="add to whishlist">
-                <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-              <button class="action-btn" aria-label="compare">
-                <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-            </div>
+    <div class="suits-ul-first-child">
+        <li class="suits-item">
+            <div class="shop-card product" data-price="200" data-color="aliceblue">
+            <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/aliceblue.jpeg" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
             
-          </div>
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$299.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+      
+        <li class="suits-item">
+            <div class="shop-card product" data-price="200" data-color="aliceblue">
+                <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/aliceblue.jpeg" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$299.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+      
+        <li class="suits-item">
+            <div class="shop-card product" data-price="200" data-color="aliceblue">
+                <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/aliceblue.jpeg" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$299.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+      
+        <li class="suits-item" >
+            <div class="shop-card product" data-price="200" data-color="aliceblue">
+                <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/aliceblue.jpeg" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$299.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+    </div>
 
-          <div class="card-content">
+    <div class="suits-ul-second-child">
+        <li class="suits-item">
+            <div class="shop-card product" data-price="555" data-color="blue">
+                <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/blue.png" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$555.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+      
+        <li class="suits-item">
+            <div class="shop-card product" data-price="666" data-color="maroon">
+                <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/maroon-1.jpeg" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$666.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+      
+        <li class="suits-item">
+            <div class="shop-card product" data-price="777" data-color="maroon">
+                <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/maroon-1.jpeg" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$777.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+      
+        <li class="suits-item">
+            <div class="shop-card product" data-price="888" data-color="green">
+                <div class="card-banner">
+                    <div class="suit-img-div">
+                        <img src="assets/product-images/green.jpeg" alt="">
+                    </div>
+      
+                    <div class="card-actions">
+                        <button class="action-btn" aria-label="add to cart">
+                            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="add to whishlist">
+                            <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                          </button>
+            
+                          <button class="action-btn" aria-label="compare">
+                            <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                        </button>
+      
+                    </div>
+                </div>
+      
+                <div class="card-content">
+                    <div class="price">
+                        <del class="del">$399.00</del>
+          
+                        <span  class="span">$888.00</span>
+                      </div>
+          
+                      <h3>
+                        <a href="#" class="card-title">Men Black Suit</a>
+                      </h3>
+          
+                      <div class="card-rating">
+          
+                        <div class="rating-wrapper" aria-label="5 start rating">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+          
+                        <p class="rating-text">5170 reviews</p>
+          
+                      </div>
+          
+                </div>
+            </div>
+        </li>
+    </div>
 
-            <div class="price">
-              <del class="del">$399.00</del>
+    <div class="suits-ul-third-child">
 
-              <span  class="span product">$400.00</span>
+  <li class="suits-item">
+    <div class="shop-card product" data-price="999" data-color="gray">
+        <div class="card-banner">
+            <div class="suit-img-div">
+                <img src="assets/product-images/gray-1.jpeg" alt="">
             </div>
 
-            <h3>
-              <a href="#" class="card-title">Men Black Suit</a>
-            </h3>
-
-            <div class="card-rating">
-
-              <div class="rating-wrapper" aria-label="5 start rating">
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-                <ion-icon name="star" aria-hidden="true"></ion-icon>
-              </div>
-
-              <p class="rating-text">5170 reviews</p>
+            <div class="card-actions">
+                <button class="action-btn" aria-label="add to cart">
+                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="add to whishlist">
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="compare">
+                    <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                </button>
 
             </div>
-
-          </div>
-
         </div>
-      </li>
-</ul>
 
-<script>
-    function sortProducts() {
-      var selectBox = document.getElementById("sort-select");
-      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-      var productsContainer = document.getElementById("products");
-      var productItems = Array.from(productsContainer.getElementsByClassName("scrollbar-item"));
+        <div class="card-content">
+            <div class="price">
+                <del class="del">$399.00</del>
   
-      if (selectedValue === "highest") {
-        productItems.sort(function(a, b) {
-          return b.querySelector('.product').dataset.price - a.querySelector('.product').dataset.price;
-        });
-      } else if (selectedValue === "lowest") {
-        productItems.sort(function(a, b) {
-          return a.querySelector('.product').dataset.price - b.querySelector('.product').dataset.price;
-        });
-      }
+                <span  class="span">$999.00</span>
+              </div>
   
-      // Clear existing products
-      productsContainer.innerHTML = "";
+              <h3>
+                <a href="#" class="card-title">Men Black Suit</a>
+              </h3>
   
-      // Append sorted products
-      productItems.forEach(function(item) {
-        productsContainer.appendChild(item);
-      });
-    }
+              <div class="card-rating">
+  
+                <div class="rating-wrapper" aria-label="5 start rating">
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                </div>
+  
+                <p class="rating-text">5170 reviews</p>
+  
+              </div>
+  
+        </div>
+    </div>
+</li>
+
+<li class="suits-item">
+    <div class="shop-card product" data-price="1000" data-color="brown">
+        <div class="card-banner">
+            <div class="suit-img-div">
+                <img src="assets/product-images/brown.jpeg" alt="">
+            </div>
+
+            <div class="card-actions">
+                <button class="action-btn" aria-label="add to cart">
+                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="add to whishlist">
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="compare">
+                    <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="card-content">
+            <div class="price">
+                <del class="del">$399.00</del>
+  
+                <span  class="span">$1000.00</span>
+              </div>
+  
+              <h3>
+                <a href="#" class="card-title">Men Black Suit</a>
+              </h3>
+  
+              <div class="card-rating">
+  
+                <div class="rating-wrapper" aria-label="5 start rating">
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                </div>
+  
+                <p class="rating-text">5170 reviews</p>
+  
+              </div>
+  
+        </div>
+    </div>
+</li>
+
+<li class="suits-item">
+    <div class="shop-card product" data-price="1100" data-color="blue">
+        <div class="card-banner">
+            <div class="suit-img-div">
+                <img src="assets/product-images/blue-1.jpeg" alt="">
+            </div>
+
+            <div class="card-actions">
+                <button class="action-btn" aria-label="add to cart">
+                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="add to whishlist">
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="compare">
+                    <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="card-content">
+            <div class="price">
+                <del class="del">$399.00</del>
+  
+                <span  class="span">$1100.00</span>
+              </div>
+  
+              <h3>
+                <a href="#" class="card-title">Men Black Suit</a>
+              </h3>
+  
+              <div class="card-rating">
+  
+                <div class="rating-wrapper" aria-label="5 start rating">
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                </div>
+  
+                <p class="rating-text">5170 reviews</p>
+  
+              </div>
+  
+        </div>
+    </div>
+</li>
+
+<li class="suits-item">
+    <div class="shop-card product" data-price="1200" data-color="black">
+        <div class="card-banner">
+            <div class="suit-img-div">
+                <img src="assets/product-images/black.jpeg" alt="">
+            </div>
+
+            <div class="card-actions">
+                <button class="action-btn" aria-label="add to cart">
+                    <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="add to whishlist">
+                    <ion-icon name="star-outline" aria-hidden="true"></ion-icon>
+                  </button>
+    
+                  <button class="action-btn" aria-label="compare">
+                    <ion-icon name="repeat-outline" aria-hidden="true"></ion-icon>
+                </button>
+
+            </div>
+        </div>
+
+        <div class="card-content">
+            <div class="price">
+                <del class="del">$399.00</del>
+  
+                <span  class="span">$1200.00</span>
+              </div>
+  
+              <h3>
+                <a href="#" class="card-title">Men Black Suit</a>
+              </h3>
+  
+              <div class="card-rating">
+  
+                <div class="rating-wrapper" aria-label="5 start rating">
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                  <ion-icon name="star" aria-hidden="true"></ion-icon>
+                </div>
+  
+                <p class="rating-text">5170 reviews</p>
+  
+              </div>
+  
+        </div>
+    </div>
+  </li>
+    </div>
+
+    
+
+    
+ 
+  </ul>
+  <script>
+    function filterProducts() {
+    var select = document.getElementById("sort-select");
+    var selectedOption = select.options[select.selectedIndex].value;
+
+    var products = document.querySelectorAll('.suits-item');
+
+    var sortedProducts = Array.from(products).sort(function(a, b) {
+        var priceA = parseFloat(a.querySelector('.span').textContent.replace('$', ''));
+        var priceB = parseFloat(b.querySelector('.span').textContent.replace('$', ''));
+
+        if (selectedOption === "highest") {
+            return priceB - priceA;
+        } else if (selectedOption === "lowest") {
+            return priceA - priceB;
+        } else {
+            // Do nothing for other options or handle as needed
+            return 0;
+        }
+    });
+
+    // Clear the current product list
+    var productList = document.getElementById('products');
+    productList.innerHTML = '';
+
+    // Append sorted products to the product list
+    sortedProducts.forEach(function(product) {
+        productList.appendChild(product);
+    });
+}
+
   </script>
+  
+  
+  
   
 
 </body>
