@@ -4,6 +4,18 @@
     box-sizing: border-box;
 }
 
+main {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suit-main-section {
+    width: 80%;
+    background-color: #1095ed;
+}
+
 .breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -708,3 +720,4 @@
     border-top: var(--size) solid rgb(255, 255, 255);
     top: 55%;
   }
+
