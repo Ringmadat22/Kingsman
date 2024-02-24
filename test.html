@@ -21,16 +21,104 @@
           </select>
         </div>
       </div>
+
+      <div class="color">
+        <div class="color-content">
+          <h2>Select Color</h2>
+          <div class="divider"></div>
+          <div class="item-lists">
+            <div id="myColorFilterContainer">
+                <button class="color-btn active" onclick="filterColor('all')"> All Colors</button>
+                <button class="color-btn" onclick="filterColor('blue')"> Blue</button>
+                <button class="color-btn" onclick="filterColor('gray')"> Gray</button>
+                <button class="color-btn" onclick="filterColor('black')"> Black</button>
+                <!-- Add more color buttons as needed -->
+              </div>
+          </div>
+        </div>
+      </div>
       
+      <script>
+        // Function to filter items by color
+        function filterColor(color) {
+          var items = document.getElementsByClassName("suits-item");
+          if (color == "all") {
+            for (var i = 0; i < items.length; i++) {
+              showItem(items[i]);
+            }
+          } else {
+            for (var i = 0; i < items.length; i++) {
+              if (items[i].getAttribute("data-color") === color) {
+                showItem(items[i]);
+              } else {
+                hideItem(items[i]);
+              }
+            }
+          }
+        }
+        
+        // Function to hide an item
+        function hideItem(item) {
+          item.style.display = "none";
+        }
+        
+        // Function to show an item
+        function showItem(item) {
+          item.style.display = "block";
+        }
+        
+        // Add active class to the current button (highlight it)
+        var colorFilterContainer = document.getElementById("myColorFilterContainer");
+        var colorBtns = colorFilterContainer.getElementsByClassName("color-btn");
+        for (var i = 0; i < colorBtns.length; i++) {
+          colorBtns[i].addEventListener("click", function(){
+            var current = colorFilterContainer.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+
+
+<script>
+    // Function to filter items by material
+    function filterMaterial(material) {
+      var items = document.getElementsByClassName("suits-item");
+      for (var i = 0; i < items.length; i++) {
+        if (material === "all" || items[i].getAttribute("data-material") === material) {
+          showItem(items[i]);
+        } else {
+          hideItem(items[i]);
+        }
+      }
+    }
+    
+    // Function to hide an item
+    function hideItem(item) {
+      item.style.display = "none";
+    }
+    
+    // Function to show an item
+    function showItem(item) {
+      item.style.display = "block";
+    }
+</script>
+
+<div id="myMaterialFilterContainer">
+    <button class="material-btn active" onclick="filterMaterial('all')"> All Materials</button>
+    <button class="material-btn" onclick="filterMaterial('cotton')"> Cotton</button>
+    <button class="material-btn" onclick="filterMaterial('silk')"> Silk</button>
+    <!-- Add more material buttons as needed -->
+  </div>
 
 <ul class="suits-ul" id="products">
 
     <div class="suits-ul-first-child">
-        <li class="suits-item">
-            <div class="shop-card product" data-price="200" data-color="aliceblue">
+        <li class="suits-item" data-color="blue" data-material="cotton">
+            <div class="shop-card product filterDiv" data-price="200" >
             <div class="card-banner">
                     <div class="suit-img-div">
-                        <img src="assets/product-images/aliceblue.jpeg" alt="">
+                        <img src="assets/product-images/blue-1.jpeg" alt="">
                     </div>
       
                     <div class="card-actions">
@@ -78,8 +166,8 @@
             </div>
         </li>
       
-        <li class="suits-item">
-            <div class="shop-card product" data-price="200" data-color="aliceblue">
+        <li class="suits-item" data-color="gray" data-material="silk">
+            <div class="shop-card product filterDiv" data-price="200" data-color="aliceblue">
                 <div class="card-banner">
                     <div class="suit-img-div">
                         <img src="assets/product-images/aliceblue.jpeg" alt="">
@@ -130,11 +218,11 @@
             </div>
         </li>
       
-        <li class="suits-item">
-            <div class="shop-card product" data-price="200" data-color="aliceblue">
+        <li class="suits-item" data-color="black" data-material="cotton">
+            <div class="shop-card product filterDiv" data-price="200">
                 <div class="card-banner">
                     <div class="suit-img-div">
-                        <img src="assets/product-images/aliceblue.jpeg" alt="">
+                        <img src="assets/product-images/black.jpeg" alt="">
                     </div>
       
                     <div class="card-actions">
@@ -183,7 +271,7 @@
         </li>
       
         <li class="suits-item" >
-            <div class="shop-card product" data-price="200" data-color="aliceblue">
+            <div class="shop-card product filterDiv" data-price="200" data-color="aliceblue">
                 <div class="card-banner">
                     <div class="suit-img-div">
                         <img src="assets/product-images/aliceblue.jpeg" alt="">
@@ -692,6 +780,45 @@
     });
 }
 
+
+// Function to filter items by color
+function filterColor(color) {
+  var items = document.getElementsByClassName("suits-item");
+  if (color == "all") {
+    for (var i = 0; i < items.length; i++) {
+      showItem(items[i]);
+    }
+  } else {
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].getAttribute("data-color") === color) {
+        showItem(items[i]);
+      } else {
+        hideItem(items[i]);
+      }
+    }
+  }
+}
+
+// Function to hide an item
+function hideItem(item) {
+  item.style.display = "none";
+}
+
+// Function to show an item
+function showItem(item) {
+  item.style.display = "block";
+}
+
+// Add active class to the current button (highlight it)
+var colorFilterContainer = document.getElementById("myColorFilterContainer");
+var colorBtns = colorFilterContainer.getElementsByClassName("color-btn");
+for (var i = 0; i < colorBtns.length; i++) {
+  colorBtns[i].addEventListener("click", function(){
+    var current = colorFilterContainer.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
   </script>
   
   

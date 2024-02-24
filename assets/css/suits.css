@@ -816,7 +816,7 @@ main {
     margin-top: 58px;
 }
 
-.suits-item{
+.suits-item {
     width: calc(25% - 20px); /* 4 items per row, considering margin */
     margin: 10px;
     margin-bottom: 60px;
@@ -826,6 +826,23 @@ main {
     border-radius: 7px;
 }
 
+@media (max-width: 1200px) {
+    .suits-item {
+        width: calc(33.33% - 20px); /* 3 items per row for medium-sized screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .suits-item {
+        width: calc(50% - 20px); /* 2 items per row for small-sized screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .suits-item {
+        width: 300px; /* Set width to 400px for screens less than 400px wide */
+    }
+}
 .suits-item img {
     width: 100%;
     height: 300px;

@@ -71,26 +71,66 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // COLOR FILTER
- document.addEventListener("DOMContentLoaded", function() {
-        const checkboxes = document.querySelectorAll('.material-checkbox input[type="checkbox"]');
-        const items = document.querySelectorAll('.suits-item');
-
-        checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', filterItems);
-        });
-
-        function filterItems() {
-            checkboxes.forEach(function(chk) {
-                const checked = chk.checked;
-                const color = chk.dataset.color;
-                items.forEach(function(item) {
-                    const itemColor = item.dataset.color;
-                    if (!checked || itemColor === color) {
-                        item.classList.remove('hidden');
-                    } else {
-                        item.classList.add('hidden');
-                    }
-                });
-            });
+ 
+function filterColor(color) {
+    var items = document.getElementsByClassName("suits-item");
+    if (color == "all") {
+      for (var i = 0; i < items.length; i++) {
+        showItem(items[i]);
+      }
+    } else {
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].getAttribute("data-color") === color) {
+          showItem(items[i]);
+        } else {
+          hideItem(items[i]);
         }
+      }
+    }
+  }
+  
+  // Function to hide an item
+  function hideItem(item) {
+    item.style.display = "none";
+  }
+  
+  // Function to show an item
+  function showItem(item) {
+    item.style.display = "block";
+  }
+  
+  // Add active class to the current button (highlight it)
+  var colorFilterContainer = document.getElementById("myColorFilterContainer");
+  var colorBtns = colorFilterContainer.getElementsByClassName("color-btn");
+  for (var i = 0; i < colorBtns.length; i++) {
+    colorBtns[i].addEventListener("click", function(){
+      var current = colorFilterContainer.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
     });
+  }
+
+// MATERIAL TYPE 
+
+
+// Function to filter items by material
+function filterMaterial(material) {
+    var items = document.getElementsByClassName("suits-item");
+    for (var i = 0; i < items.length; i++) {
+      if (material === "all" || items[i].getAttribute("data-material") === material) {
+        showItem(items[i]);
+      } else {
+        hideItem(items[i]);
+      }
+    }
+  }
+  
+  // Function to hide an item
+  function hideItem(item) {
+    item.style.display = "none";
+  }
+  
+  // Function to show an item
+  function showItem(item) {
+    item.style.display = "block";
+  }
