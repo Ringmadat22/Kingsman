@@ -134,3 +134,21 @@ function filterMaterial(material) {
   function showItem(item) {
     item.style.display = "block";
   }
+
+
+
+
+// SIZE FILTER
+function filterSize(c) {
+    var items = document.getElementsByClassName('suits-item');
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var dataSize = item.getAttribute('data-size');
+      if (c === 'all' || dataSize === c) {
+        item.style.display = '';
+      } else {
+        item.style.display = 'none';
+      }
+    }
+  }
+  

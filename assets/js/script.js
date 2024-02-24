@@ -116,47 +116,7 @@ priceInput.forEach(input =>{
         }
     });
 });
-rangeInput.forEach(input =>{
-    input.addEventListener("input", e =>{
-        let minVal = parseInt(rangeInput[0].value),
-        maxVal = parseInt(rangeInput[1].value);
-        if((maxVal - minVal) < priceGap){
-            if(e.target.className === "range-min"){
-                rangeInput[0].value = maxVal - priceGap
-            }else{
-                rangeInput[1].value = minVal + priceGap;
-            }
-        }else{
-            priceInput[0].value = minVal;
-            priceInput[1].value = maxVal;
-            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
-            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-        }
-    });
-});
 
-// Get the search input element and the list of items
-const searchInput = document.getElementById('search');
-const searchInput2 = document.getElementById('search');
-const itemList = document.getElementById('item-list');
-const itemList2 = document.getElementById('items-list');
-
-// Add an event listener to the search input for real-time filtering
-searchInput.addEventListener('input', filterItems);
-
-function filterItems() {
-    const searchQuery = searchInput.value.toLowerCase();
-    const items = itemList.getElementsByTagName('li');
-
-    for (const item of items) {
-        const itemText = item.textContent.toLowerCase();
-        if (itemText.includes(searchQuery)) {
-            item.style.display = 'block';
-        } else {
-            item.style.display = 'none';
-        }
-    }
-}
 
 function sortProducts() {
   var selectBox = document.getElementById("sort-select");
@@ -180,61 +140,157 @@ function sortProducts() {
   });
 }
 
-// Function to filter products based on price range
-function filterProductsByPrice() {
-  // Get the minimum and maximum price values from the input fields
-  var minPrice = parseInt(document.querySelector('.input-min').value);
-  var maxPrice = parseInt(document.querySelector('.input-max').value);
 
-  // Get all product items
-  var productItems = document.querySelectorAll('.scrollbar-item');
+function filterProducts() {
+  var select = document.getElementById("sort-select");
+  var selectedOption = select.options[select.selectedIndex].value;
 
-  // Loop through each product item
-  productItems.forEach(function(item) {
-      // Get the price of the current product item
-      var price = parseInt(item.querySelector('.product').getAttribute('data-price'));
+  var products = document.querySelectorAll('.suits-item');
 
-      // If the price falls within the selected range, display the product
-      if (price >= minPrice && price <= maxPrice) {
-          item.style.display = 'block';
+  var sortedProducts = Array.from(products).sort(function(a, b) {
+      var priceA = parseFloat(a.querySelector('.span').textContent.replace('$', ''));
+      var priceB = parseFloat(b.querySelector('.span').textContent.replace('$', ''));
+
+      if (selectedOption === "highest") {
+          return priceB - priceA;
+      } else if (selectedOption === "lowest") {
+          return priceA - priceB;
       } else {
-          // Otherwise, hide the product
-          item.style.display = 'none';
+          // Do nothing for other options or handle as needed
+          return 0;
       }
+  });
+
+  // Clear the current product list
+  var productList = document.getElementById('products');
+  productList.innerHTML = '';
+
+  // Append sorted products to the product list
+  sortedProducts.forEach(function(product) {
+      productList.appendChild(product);
   });
 }
 
-// Add event listeners to input fields and range inputs for price filtering
+
+
+//PRICE FILTER
+
+
+// JavaScript code for filtering items based on price range
+document.addEventListener("DOMContentLoaded", function() {
+  const minInput = document.querySelector(".input-min");
+  const maxInput = document.querySelector(".input-max");
+  const items = document.querySelectorAll(".suits-item");
+
+  function filterItems() {
+    const minPrice = parseFloat(minInput.value);
+    const maxPrice = parseFloat(maxInput.value);
+    
+    items.forEach(item => {
+      const itemPrice = parseFloat(item.querySelector(".price .span").textContent.slice(1));
+      if (itemPrice >= minPrice && itemPrice <= maxPrice) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+
+  // Initial filter
+  filterItems();
+
+  // Event listeners for input changes
+  minInput.addEventListener("input", filterItems);
+  maxInput.addEventListener("input", filterItems);
+});
+
+// Add event listeners to input fields for price filtering
 document.querySelector('.input-min').addEventListener('input', filterProductsByPrice);
 document.querySelector('.input-max').addEventListener('input', filterProductsByPrice);
 
+// Call the filter function initially to ensure items are filtered on page load if needed
+filterProductsByPrice();
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Get all checkboxes
-  var checkboxes = document.querySelectorAll('.material-checkbox input[type="checkbox"]');
 
-  checkboxes.forEach(function(checkbox) {
-      // Add event listener to each checkbox
-      checkbox.addEventListener("change", function() {
-          // Get the color value of the checkbox
-          var color = checkbox.parentNode.textContent.trim();
 
-          // Get all product items
-          var productItems = document.querySelectorAll('.scrollbar-item');
+// COLOR FILTER
 
-          // Loop through each product item
-          productItems.forEach(function(item) {
-              var productColor = item.querySelector('.shop-card.product').dataset.color;
+function filterColor(color) {
+  var items = document.getElementsByClassName("suits-item");
+  if (color == "all") {
+    for (var i = 0; i < items.length; i++) {
+      showItem(items[i]);
+    }
+  } else {
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].getAttribute("data-color") === color) {
+        showItem(items[i]);
+      } else {
+        hideItem(items[i]);
+      }
+    }
+  }
+}
 
-              // Check if the product item matches the selected color
-              if (color === productColor || color === "Select Color") {
-                  // Show the product item
-                  item.style.display = "block";
-              } else {
-                  // Hide the product item
-                  item.style.display = "none";
-              }
-          });
-      });
+// Function to hide an item
+function hideItem(item) {
+  item.style.display = "none";
+}
+
+// Function to show an item
+function showItem(item) {
+  item.style.display = "block";
+}
+
+// Add active class to the current button (highlight it)
+var colorFilterContainer = document.getElementById("myColorFilterContainer");
+var colorBtns = colorFilterContainer.getElementsByClassName("color-btn");
+for (var i = 0; i < colorBtns.length; i++) {
+  colorBtns[i].addEventListener("click", function(){
+    var current = colorFilterContainer.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
   });
-});
+}
+
+// MATERIAL TYPE 
+
+
+// Function to filter items by material
+function filterMaterial(material) {
+  var items = document.getElementsByClassName("suits-item");
+  for (var i = 0; i < items.length; i++) {
+    if (material === "all" || items[i].getAttribute("data-material") === material) {
+      showItem(items[i]);
+    } else {
+      hideItem(items[i]);
+    }
+  }
+}
+
+// Function to hide an item
+function hideItem(item) {
+  item.style.display = "none";
+}
+
+// Function to show an item
+function showItem(item) {
+  item.style.display = "block";
+}
+
+
+
+
+// SIZE FILTER
+function filterSize(c) {
+  var items = document.getElementsByClassName('suits-item');
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    var dataSize = item.getAttribute('data-size');
+    if (c === 'all' || dataSize === c) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  }
+}
