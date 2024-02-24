@@ -5,19 +5,43 @@
 }
 
 main {
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     margin-top: 100px;
+    padding: 20px 0;
 }
 
 .suit-main-section {
     width: 90%;
-    background-color: #1095ed;
     display: flex;
     justify-content:space-between;
 }
+
+.main-container-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.breadcrumb-main {
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.167);
+}
+
+.top-suit-container{
+    margin-bottom: 70px;
+}
+
+.top-suit-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
 
 .breadcrumb {
     padding: 10px 16px;
@@ -46,10 +70,7 @@ main {
     height: 30px;
     font-size: 30px;
   }
-  
-  main {
-    padding: 20px 0;
-  }
+
   
   .shop-main-section {
     padding: 20px 0;
@@ -673,6 +694,7 @@ main {
   .new-sort-main{
     display: flex;
     justify-content: right;
+    margin-top: 16px;
   }
   
   .custom-select {
@@ -779,17 +801,25 @@ main {
     top: 55%;
   }
 
+.suit-container {
+    margin-right: 40px;
+}
+
+  .suit-container {
+    width: 85%;
+    padding: 20px 0;
+  }
+ 
 .suits-ul {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 98px;
+    margin-top: 58px;
 }
 
 .suits-item{
     width: calc(25% - 20px); /* 4 items per row, considering margin */
     margin: 10px;
     margin-bottom: 60px;
-    background-color: #f0f0f0;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid rgba(128, 128, 128, 0.436);
