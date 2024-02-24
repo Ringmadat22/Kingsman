@@ -33,47 +33,33 @@ function filterProducts() {
 //PRICE FILTER
 
 
-// Function to filter products based on price range
-function filterProductsByPrice() {
-    // Get the minimum and maximum price values from the input fields
-    var minPrice = parseInt(document.querySelector('.input-min').value);
-    var maxPrice = parseInt(document.querySelector('.input-max').value);
-  
-    // Get all product items
-    var productItems = document.querySelectorAll('.suits-item');
-  
-    // Variable to keep track if any item matches the price range
-    var itemsFound = false;
-  
-    // Loop through each product item
-    productItems.forEach(function(item) {
-        // Get the price of the current product item
-        var price = parseInt(item.querySelector('.shop-card.product').getAttribute('data-price'));
-  
-        // If the price falls within the selected range, display the product
-        if (price >= minPrice && price <= maxPrice) {
-            item.style.display = 'block';
-            itemsFound = true;
+// JavaScript code for filtering items based on price range
+document.addEventListener("DOMContentLoaded", function() {
+    const minInput = document.querySelector(".input-min");
+    const maxInput = document.querySelector(".input-max");
+    const items = document.querySelectorAll(".suits-item");
+
+    function filterItems() {
+      const minPrice = parseFloat(minInput.value);
+      const maxPrice = parseFloat(maxInput.value);
+      
+      items.forEach(item => {
+        const itemPrice = parseFloat(item.querySelector(".price .span").textContent.slice(1));
+        if (itemPrice >= minPrice && itemPrice <= maxPrice) {
+          item.style.display = "block";
         } else {
-            // Otherwise, check if the price is almost near to the selected range
-            if (price >= minPrice - 50 && price <= maxPrice + 50) {
-                item.style.display = 'block';
-                itemsFound = true;
-            } else {
-                // Hide the product
-                item.style.display = 'none';
-            }
+          item.style.display = "none";
         }
-    });
-  
-    // If no items were found, display a message or handle the case as needed
-    if (!itemsFound) {
-      // For example, you can display a message:
-      // alert('No items found within the selected price range.');
-      // Or show a placeholder
-      // document.getElementById('products').innerHTML = '<p>No items found within the selected price range.</p>';
+      });
     }
-  }
+
+    // Initial filter
+    filterItems();
+
+    // Event listeners for input changes
+    minInput.addEventListener("input", filterItems);
+    maxInput.addEventListener("input", filterItems);
+  });
   
   // Add event listeners to input fields for price filtering
   document.querySelector('.input-min').addEventListener('input', filterProductsByPrice);
