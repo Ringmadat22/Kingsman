@@ -72,43 +72,50 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // COLOR FILTER
  
+// Initially show all items
+filterColor("all");
+
+// Function to filter items based on color
 function filterColor(color) {
-    var items = document.getElementsByClassName("suits-item");
-    if (color == "all") {
-      for (var i = 0; i < items.length; i++) {
+  var items = document.getElementsByClassName("suits-item");
+  
+  // If "all" is selected, show all items
+  if (color === "all") {
+    for (var i = 0; i < items.length; i++) {
+      showItem(items[i]);
+    }
+  } else {
+    // Iterate through items, hide those that don't match selected color
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].getAttribute("data-color") === color) {
         showItem(items[i]);
-      }
-    } else {
-      for (var i = 0; i < items.length; i++) {
-        if (items[i].getAttribute("data-color") === color) {
-          showItem(items[i]);
-        } else {
-          hideItem(items[i]);
-        }
+      } else {
+        hideItem(items[i]);
       }
     }
   }
-  
-  // Function to hide an item
-  function hideItem(item) {
-    item.style.display = "none";
-  }
-  
-  // Function to show an item
-  function showItem(item) {
-    item.style.display = "block";
-  }
-  
-  // Add active class to the current button (highlight it)
-  var colorFilterContainer = document.getElementById("myColorFilterContainer");
-  var colorBtns = colorFilterContainer.getElementsByClassName("color-btn");
-  for (var i = 0; i < colorBtns.length; i++) {
-    colorBtns[i].addEventListener("click", function(){
-      var current = colorFilterContainer.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
+}
+
+// Function to hide an item
+function hideItem(item) {
+  item.style.display = "none";
+}
+
+// Function to show an item
+function showItem(item) {
+  item.style.display = ""; // Reset display to default (block or inline, etc.)
+}
+
+// Add active class to the current button (highlight it)
+var colorFilterContainer = document.getElementById("myColorFilterContainer");
+var colorBtns = colorFilterContainer.getElementsByClassName("color-btn");
+for (var i = 0; i < colorBtns.length; i++) {
+  colorBtns[i].addEventListener("click", function(){
+    var current = colorFilterContainer.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 
 // MATERIAL TYPE 
 
