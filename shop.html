@@ -292,7 +292,7 @@
                         <button class="filter-btn" onclick="filterItems('pants')">Pants</button>
                         <button class="filter-btn" onclick="filterItems('jeans')">Jeans</button>
                         <button class="filter-btn" onclick="filterItems('tshirts')">T-Shirts</button>
-                        <button class="filter-btn" onclick="filterItems('shorts')">Shorts</button>
+                        <button class="filter-btn" onclick="filterItems('footwear')">Shoes</button>
                         <button class="filter-btn" onclick="filterItems('blazers')">Blazers</button>
                       </div>
                       
@@ -313,105 +313,18 @@
 
                           <form class="color-form">
 
-                              <div class="color-form-1">
-
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Black
-                                      </label>
-                                      
-                                  </div>
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          White
-                                      </label>
-                                      
-                                  </div>
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Beige
-                                      </label>
-                                      
-                                  </div>
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Red
-                                      </label>
-                                      
-                                  </div>
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Red
-                                      </label>
-                                      
-                                  </div>
-                              
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Brown
-                                      </label>
-                                      
-                                  </div>
-
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Green
-                                      </label>
-                                      
-                                  </div>
-
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Orange
-                                      </label>
-                                      
-                                  </div>
-
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Checkbox Label
-                                      </label>
-                                      
-                                  </div>
-
-                                  <div class="checkbox-1">
-
-                                      <label class="material-checkbox">
-                                          <input type="checkbox">
-                                          <span class="checkmark"></span>
-                                          Checkbox Label
-                                      </label>
-                                      
-                                  </div>
-
-                              </div>
+                            <div id="myColorFilterContainer">
+                              <button class="color-btn active" onclick="filterColor('all')"> All Colors</button>
+                              <button class="color-btn" onclick="filterColor('blue')"> Blue</button>
+                              <button class="color-btn" onclick="filterColor('black')"> Black</button>
+                              <button class="color-btn" onclick="filterColor('gray')"> Gray</button>
+                              <button class="color-btn" onclick="filterColor('maroon')"> Maroon</button>
+                              <button class="color-btn" onclick="filterColor('red')"> Red</button>
+                              <button class="color-btn" onclick="filterColor('white')"> White</button>
+                              <button class="color-btn" onclick="filterColor('green')"> Green</button>
+                              <button class="color-btn" onclick="filterColor('brown')"> Brown</button>
+                              <!-- Add more color buttons as needed -->
+                          </div>
                               
                           </form>.
                           
@@ -661,13 +574,13 @@
 
                   <div class="new-sort-main">
                     <div class="custom-select">
-                      <select>
-                        <option value="">SORT BY</option>
-                        <option value="">Highest Price</option>
-                        <option value="">Lowwest Price</option>
+                      <select id="sort-select" onchange="filterProducts()">
+                        <option value="" >SORT BY</option>
+                        <option value="highest">Highest Price</option>
+                        <option value="lowest">Lowest Price</option>
                       </select>
                     </div>
-                  </div>
+                </div>
                   
 
                   <ul class="shop-ul">
@@ -716,12 +629,11 @@
                     </li>
 
                     <li class="shop-item" data-color="black" data-material="silk" data-type="shirts" data-size="small">
-                      <div class="shop-card product" data-price="200">
+                      <div class="shop-card product" data-price="50">
                         <div class="card-banner">
                           <div class = "product-section">
                             <div class = "product-img">
-                                <img src = "assets/images/suits/doublebreastedstripped/Double-breasted-black-suit1.jpeg" alt = "front product image">
-                                <img src = "assets/images/suits/doublebreastedstripped/Double-breasted-black-suit2.jpeg" alt = "rear product image" class = "rear-img">
+                                <img src = "assets/images/shirts/istockphoto-1832117477-1024x1024.jpg" alt = "front product image">
                             </div>
                           </div>
                           <div class="card-actions">
@@ -738,10 +650,10 @@
                         </div>
                         <div class="card-content">
                           <div class="price">
-                            <span class="span">$299.00</span>
+                            <span class="span">$50.00</span>
                           </div>
                           <h3>
-                            <a href="#" class="card-title">Men Black Silk</a>
+                            <a href="#" class="card-title">Men Shirts</a>
                           </h3>
                           <div class="card-rating">
                             <div class="rating-wrapper" aria-label="5 start rating">
@@ -758,13 +670,13 @@
                       </div>
                     </li>
 
-                    <li class="shop-item" data-color="black" data-material="silk" data-type="blazers" data-size="small">
-                      <div class="shop-card product" data-price="200">
+                    <li class="shop-item" data-color="blue" data-material="wool" data-type="blazers" data-size="small">
+                      <div class="shop-card product" data-price="150">
                         <div class="card-banner">
                           <div class = "product-section">
                             <div class = "product-img">
-                                <img src = "assets/images/suits/doublebreastedstripped/Double-breasted-black-suit1.jpeg" alt = "front product image">
-                                <img src = "assets/images/suits/doublebreastedstripped/Double-breasted-black-suit2.jpeg" alt = "rear product image" class = "rear-img">
+                                <img src = "assets/images/suits/blazers/blue1.jpeg" alt = "front product image">
+                                <img src = "assets/images/suits/blazers/blue2.jpeg" alt = "rear product image" class = "rear-img">
                             </div>
                           </div>
                           <div class="card-actions">
@@ -781,10 +693,10 @@
                         </div>
                         <div class="card-content">
                           <div class="price">
-                            <span class="span">$299.00</span>
+                            <span class="span">$150.00</span>
                           </div>
                           <h3>
-                            <a href="#" class="card-title">Men Black Silk</a>
+                            <a href="#" class="card-title">Men Blue Blazer</a>
                           </h3>
                           <div class="card-rating">
                             <div class="rating-wrapper" aria-label="5 start rating">
@@ -801,13 +713,12 @@
                       </div>
                     </li>
 
-                    <li class="shop-item" data-color="black" data-material="silk" data-type="footwear" data-size="small">
-                <div class="shop-card product" data-price="200">
+                    <li class="shop-item" data-color="brown" data-material="silk" data-type="footwear" data-size="small">
+                <div class="shop-card product" data-price="300">
                   <div class="card-banner">
                     <div class = "product-section">
                       <div class = "product-img">
-                          <img src = "assets/images/suits/doublebreastedstripped/Double-breasted-black-suit1.jpeg" alt = "front product image">
-                          <img src = "assets/images/suits/doublebreastedstripped/Double-breasted-black-suit2.jpeg" alt = "rear product image" class = "rear-img">
+                          <img src = "assets/images/shoes/Bruno Marc Men's Suede Leather Chelsea Ankle Boots.jpg" alt = "front product image">
                       </div>
                     </div>
                     <div class="card-actions">
@@ -824,10 +735,10 @@
                   </div>
                   <div class="card-content">
                     <div class="price">
-                      <span class="span">$299.00</span>
+                      <span class="span">$300.00</span>
                     </div>
                     <h3>
-                      <a href="#" class="card-title">Men Black Silk</a>
+                      <a href="#" class="card-title">Bruno Marc Men's Suede Leather Chelsea Ankle Boots</a>
                     </h3>
                     <div class="card-rating">
                       <div class="rating-wrapper" aria-label="5 start rating">
@@ -844,7 +755,7 @@
                 </div>
                     </li>
 
-                    <li class="shop-item" data-color="black" data-material="silk" data-size="small">
+                    <li class="shop-item" data-color="black" data-material="silk" data-type="" data-size="small">
                       <div class="shop-card product" data-price="200">
                         <div class="card-banner">
                           <div class = "product-section">
