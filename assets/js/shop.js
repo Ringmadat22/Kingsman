@@ -1,4 +1,4 @@
-
+//SORT USING PRODUCT TYPE
   function filterItems(category) {
     const items = document.querySelectorAll('.shop-item');
     
@@ -12,6 +12,7 @@
     });
   }
 
+  //SORT FROM THE HIGHEST TO LOWEST 
   function filterProducts() {
     var select = document.getElementById("sort-select");
     var selectedOption = select.options[select.selectedIndex].value;
@@ -41,3 +42,20 @@
         productList.appendChild(product);
     });
 }
+
+
+
+
+//SORT USING COLOR function filterColor(color) {
+    var products = document.querySelectorAll('.shop-item');
+
+    products.forEach(function(product) {
+        var productColor = product.getAttribute('data-color');
+
+        if (color === 'all' || productColor === color) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+
