@@ -284,16 +284,18 @@
 
                       <input type="text" id="search" placeholder="Search for type">
 
-                      <ul id="item-list">
-                          <li><a href="#">SUITS</a></li>
-                          <li><a href="#">SHIRTS</a></li>
-                          <li><a href="#">CASUAL WEAR</a></li>
-                          <li><a href="#">PANTS</a></li>
-                          <li><a href="#">JEANS</a></li>
-                          <li><a href="#">TSHIRTS</a></li>
-                          <li><a href="#">SHORTS</a></li>
-                          <li><a href="#">BLAZERS</a></li>
-                      </ul>
+                      <div id="item-list">
+                        <button class="filter-btn active" onclick="filterItems('all')">Show All</button>
+                        <button class="filter-btn" onclick="filterItems('suits')">Suits</button>
+                        <button class="filter-btn" onclick="filterItems('shirts')">Shirts</button>
+                        <button class="filter-btn" onclick="filterItems('casual-wear')">Casual Wear</button>
+                        <button class="filter-btn" onclick="filterItems('pants')">Pants</button>
+                        <button class="filter-btn" onclick="filterItems('jeans')">Jeans</button>
+                        <button class="filter-btn" onclick="filterItems('tshirts')">T-Shirts</button>
+                        <button class="filter-btn" onclick="filterItems('shorts')">Shorts</button>
+                        <button class="filter-btn" onclick="filterItems('blazers')">Blazers</button>
+                      </div>
+                      
 
                   </div>
 
@@ -670,7 +672,7 @@
 
                   <ul class="shop-ul">
 
-                    <li class="shop-item" data-color="black" data-material="silk" data-size="small">
+                    <li class="shop-item" data-color="black" data-material="silk" data-type="suits" data-size="small">
                       <div class="shop-card product" data-price="200">
                         <div class="card-banner">
                           <div class = "product-section">
@@ -713,7 +715,7 @@
                       </div>
                     </li>
 
-                    <li class="shop-item" data-color="black" data-material="silk" data-size="small">
+                    <li class="shop-item" data-color="black" data-material="silk" data-type="shirts" data-size="small">
                       <div class="shop-card product" data-price="200">
                         <div class="card-banner">
                           <div class = "product-section">
@@ -756,7 +758,7 @@
                       </div>
                     </li>
 
-                    <li class="shop-item" data-color="black" data-material="silk" data-size="small">
+                    <li class="shop-item" data-color="black" data-material="silk" data-type="blazers" data-size="small">
                       <div class="shop-card product" data-price="200">
                         <div class="card-banner">
                           <div class = "product-section">
@@ -799,7 +801,7 @@
                       </div>
                     </li>
 
-                    <li class="shop-item" data-color="black" data-material="silk" data-size="small">
+                    <li class="shop-item" data-color="black" data-material="silk" data-type="footwear" data-size="small">
                 <div class="shop-card product" data-price="200">
                   <div class="card-banner">
                     <div class = "product-section">
@@ -1520,6 +1522,7 @@
     - custom js link
   -->
   <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/shop.js" defer></script>
 
   <!-- 
     - ionicon link
