@@ -725,6 +725,7 @@ select {
   }
 }
 
+
 @media (max-width: 800px) {
   .shop-item {
       width: calc(50% - 20px); /* 2 items per row for small-sized screens */
