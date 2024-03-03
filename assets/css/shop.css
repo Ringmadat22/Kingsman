@@ -730,6 +730,7 @@ select {
   .shop-item {
       width: calc(50% - 20px); /* 2 items per row for small-sized screens */
   }
+  
 }
 
 @media (max-width: 400px) {
